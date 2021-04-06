@@ -1,0 +1,39 @@
+  <SubContainer>
+            <ExperienceInfoParagraph>2006</ExperienceInfoParagraph>
+            <ExperienceInfoParagraph>
+              Playcom Futura Amfi Kristiansund
+            </ExperienceInfoParagraph>
+            <ExperienceInfoParagraph>Butikkmedarbeider</ExperienceInfoParagraph>
+          </SubContainer>
+          <SubContainer>
+            <ExperienceInfoParagraph>2006 - 2007</ExperienceInfoParagraph>
+            <ExperienceInfoParagraph>Tine BA Øst Oslo</ExperienceInfoParagraph>
+            <ExperienceInfoParagraph>Lagermedarbeider</ExperienceInfoParagraph>
+          </SubContainer>
+          <SubContainer>
+            <ExperienceInfoParagraph>2012 - 2014</ExperienceInfoParagraph>
+            <ExperienceInfoParagraph>
+              Coca Cola Enterprises Norge AS
+            </ExperienceInfoParagraph>
+            <ExperienceInfoParagraph>
+              Salgskonsulent Horeca/KBS (Hotell, Restaurant og Cafe/Kiosk,
+              Bensin og Service)
+            </ExperienceInfoParagraph>
+          </SubContainer>
+          <SubContainer>
+            <ExperienceInfoParagraph>2014 - 2017</ExperienceInfoParagraph>
+            <ExperienceInfoParagraph>Bakehuset AS</ExperienceInfoParagraph>
+            <ExperienceInfoParagraph>
+              Salgs og opplæringskonsulent Dagligvare (Møre og Romsdal)
+            </ExperienceInfoParagraph>
+          </SubContainer>
+          <SubContainer>
+            <ExperienceInfoParagraph>2018 - 2019</ExperienceInfoParagraph>
+            <ExperienceInfoParagraph>
+              Coca Cola European Partners AS
+            </ExperienceInfoParagraph>
+            <ExperienceInfoParagraph>
+              Salgskonsulent @Work og Vending (Møre og Romsdal, Trøndelag og
+              Nord-Norge)
+            </ExperienceInfoParagraph>
+          </SubContainer>
