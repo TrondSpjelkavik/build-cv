@@ -3,7 +3,8 @@ import { InputContainer } from "../Original";
 import styled from "styled-components";
 
 const Headline = styled.h1`
-  margin: 20px 0;
+  margin: 10px 0;
+  font-size: 22px;
 `;
 
 const HeaderContainer = styled.div`

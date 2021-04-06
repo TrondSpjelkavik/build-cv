@@ -3,13 +3,23 @@ import { useState } from "react";
 import styled from "styled-components";
 
 const KeyHeadline = styled.h2`
-  margin: 20px 0;
+  margin: 0px 0 0px 0;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
 `;
 
 const KeyInput = styled.div`
-  font-size: 18px;
+  font-size: 16px;
+`;
+
+const TextInput = styled.textarea`
+  width: 300px;
+  height: 80px;
+  margin: 10px 0 10px 0;
+`;
+
+const KeyValues = styled.div`
+  margin: 10px 0;
 `;
 
 function KeyQualifications() {
@@ -22,14 +32,13 @@ function KeyQualifications() {
       <KeyHeadline>NØKKELKVALIFIKASJONER</KeyHeadline>
       <KeyInput>
         {" "}
-        <div>{qualifications}</div>
-        <textarea
-          style={{ width: "300px", height: "150px", marginTop: "20px" }}
+        <KeyValues>{qualifications}</KeyValues>
+        <TextInput
           onChange={(e) => setQualifications(e.target.value)}
           placeholder={qualifications}
           className="show"
           type="text"
-        ></textarea>
+        ></TextInput>
       </KeyInput>
     </>
   );

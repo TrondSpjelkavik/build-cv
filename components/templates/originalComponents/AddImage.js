@@ -4,13 +4,14 @@ import ImageUploading from "react-images-uploading";
 import styled from "styled-components";
 
 const ImageContainer = styled.div`
-  position: absolute;
-  top: 2%;
-  right: 0;
+  margin-bottom: 10px;
 `;
 
 const HideImage = styled.img`
   display: none;
+  position: absolute;
+
+  right: 50%;
   @media print {
     display: block !important;
   }
@@ -63,8 +64,8 @@ function AddImage() {
                 <HideImage
                   src={image["data_url"]}
                   alt=""
-                  width="180"
-                  height="180"
+                  width="150"
+                  height="150"
                   className="hidden"
                 />
               </div>

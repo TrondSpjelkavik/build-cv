@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   DetailsContainer,
   SubSubHeadline,
@@ -5,16 +6,30 @@ import {
   Experience,
   ExperienceInfoParagraph,
   ExperienceInfoParagraphHeadline,
+  AddButton,
+  InputContainer,
 } from "../Original";
 
-import styled from "styled-components";
-
-const Reference = styled.p`
-  font-size: 20px;
-  padding: 50px 0;
-`;
-
 function Other() {
+  const [other, setOthers] = useState([]);
+  const [hobbies, setHobbies] = useState("");
+  const [certificates, setCertificates] = useState("");
+
+  function addOthers(e) {
+    e.preventDefault();
+
+    setOthers([
+      ...other,
+      {
+        hobbies: hobbies,
+        certificates: certificates,
+        id: Math.random() * 1000,
+      },
+    ]);
+    setHobbies("");
+    setCertificates("");
+  }
+
   return (
     <>
       <SubSubHeadline>ANNET</SubSubHeadline>
@@ -28,17 +43,39 @@ function Other() {
               Sertifikater
             </ExperienceInfoParagraphHeadline>
           </SubContainer>
-          <SubContainer>
+
+          {other.map((xp) => (
+            <SubContainer key={xp.id}>
+              <ExperienceInfoParagraph>{xp.hobbies}</ExperienceInfoParagraph>
+              <ExperienceInfoParagraph>
+                {xp.certificates}
+              </ExperienceInfoParagraph>
+            </SubContainer>
+          ))}
+
+          <SubContainer className="show">
             <ExperienceInfoParagraph>
-              Trening, kosthold, sport og musikk
+              <InputContainer
+                onChange={(e) => setHobbies(e.target.value)}
+                placeholder="musikk, sport, film og spill"
+                value={hobbies}
+                type="text"
+              ></InputContainer>
             </ExperienceInfoParagraph>
             <ExperienceInfoParagraph>
-              Personbil klasse B
+              <InputContainer
+                onChange={(e) => setCertificates(e.target.value)}
+                placeholder="Personbil klasse B"
+                value={certificates}
+                type="text"
+              ></InputContainer>
+              <AddButton onClick={addOthers} className="show">
+                +
+              </AddButton>
             </ExperienceInfoParagraph>
           </SubContainer>
         </Experience>
       </DetailsContainer>
-      <Reference>Referanser oppgis ved forespørsel</Reference>
     </>
   );
 }

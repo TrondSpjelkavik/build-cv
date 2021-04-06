@@ -13,23 +13,24 @@ export const DetailsContainer = styled.table`
   margin: 20px 0;
   border-collapse: collapse;
   justify-content: space-around;
+  @media print {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
 `;
 export const SubContainer = styled.tr`
   align-items: center;
-  position: relative;
 `;
 
 export const ExperienceInfoParagraph = styled.td`
-  padding: 15px 0;
-  max-width: 100px;
+  padding: 5px 0;
   border-bottom: 1px solid black;
 `;
 
 export const ExperienceInfoParagraphHeadline = styled.td`
-  padding: 15px 0;
+  padding: 5px 0;
   font-weight: 700;
   border-bottom: 3px solid black;
-  font-size: 20px;
 `;
 
 const Container = styled.div`
@@ -37,13 +38,14 @@ const Container = styled.div`
   flex-direction: column;
   margin: 0 auto;
   max-width: 700px;
+  min-height: 100vh;
   position: relative;
 `;
 
 export const SubSubHeadline = styled.h2`
-  margin: 40px 0 0 0px;
+  margin: 10px 0px 0px 0px;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
 `;
 
 export const Experience = styled.tbody`

@@ -12,9 +12,9 @@ import {
 
 function WorkExperience() {
   const [experience, setExperience] = useState([]);
-  const [year, setYear] = useState("år");
-  const [company, setCompany] = useState("firma");
-  const [position, setPosition] = useState("tittel");
+  const [year, setYear] = useState("");
+  const [company, setCompany] = useState("");
+  const [position, setPosition] = useState("");
 
   function addExperience(e) {
     e.preventDefault();
@@ -27,6 +27,9 @@ function WorkExperience() {
         id: Math.random() * 1000,
       },
     ]);
+    setYear("");
+    setCompany("");
+    setPosition("");
   }
 
   return (
@@ -50,7 +53,7 @@ function WorkExperience() {
             <SubContainer key={xp.id}>
               <ExperienceInfoParagraph>{xp.year}</ExperienceInfoParagraph>
               <ExperienceInfoParagraph>{xp.company}</ExperienceInfoParagraph>
-              <ExperienceInfoParagraph>{xp.position} </ExperienceInfoParagraph>
+              <ExperienceInfoParagraph>{xp.position}</ExperienceInfoParagraph>
             </SubContainer>
           ))}
 
@@ -58,21 +61,24 @@ function WorkExperience() {
             <ExperienceInfoParagraph>
               <InputContainer
                 onChange={(e) => setYear(e.target.value)}
-                placeholder={year}
+                placeholder="år"
+                value={year}
                 type="text"
               ></InputContainer>
             </ExperienceInfoParagraph>
             <ExperienceInfoParagraph>
               <InputContainer
                 onChange={(e) => setCompany(e.target.value)}
-                placeholder={company}
+                placeholder="firma"
+                value={company}
                 type="text"
               ></InputContainer>
             </ExperienceInfoParagraph>
             <ExperienceInfoParagraph>
               <InputContainer
                 onChange={(e) => setPosition(e.target.value)}
-                placeholder={position}
+                placeholder="tittel"
+                value={position}
                 type="text"
               ></InputContainer>
               <AddButton

@@ -12,8 +12,8 @@ import {
 
 function Courses() {
   const [courses, setCourses] = useState([]);
-  const [courseYear, setCourseYear] = useState("år");
-  const [course, setCourse] = useState("kurs");
+  const [courseYear, setCourseYear] = useState("");
+  const [course, setCourse] = useState("");
 
   function addCourse(e) {
     e.preventDefault();
@@ -26,6 +26,8 @@ function Courses() {
         id: Math.random() * 1000,
       },
     ]);
+    setCourse("");
+    setCourseYear("");
   }
 
   return (
@@ -53,14 +55,16 @@ function Courses() {
             <ExperienceInfoParagraph>
               <InputContainer
                 onChange={(e) => setCourseYear(e.target.value)}
-                placeholder={courseYear}
+                placeholder="år"
+                value={courseYear}
                 type="text"
               ></InputContainer>
             </ExperienceInfoParagraph>
             <ExperienceInfoParagraph>
               <InputContainer
                 onChange={(e) => setCourse(e.target.value)}
-                placeholder={course}
+                placeholder="kurs"
+                value={course}
                 type="text"
               ></InputContainer>
               <AddButton onClick={addCourse} courses={courses} className="show">

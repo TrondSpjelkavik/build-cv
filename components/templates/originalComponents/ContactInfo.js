@@ -3,12 +3,12 @@ import { DetailsContainer, SubContainer } from "../Original";
 import styled from "styled-components";
 
 const ContactInfoParagraphHeadline = styled.td`
-  padding-top: 10px;
+  padding-top: 5px;
   font-weight: 700;
 `;
 
 const ContactInfoParagraph = styled.td`
-  padding-top: 10px;
+  padding-top: 5px;
   display: flex;
   width: 500px;
   justify-content: space-between;

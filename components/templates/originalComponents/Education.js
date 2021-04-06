@@ -12,9 +12,9 @@ import {
 
 function Education() {
   const [schools, setSchools] = useState([]);
-  const [schoolYear, setSchoolYear] = useState("år");
-  const [school, setSchool] = useState("skole");
-  const [education, setEducation] = useState("studie");
+  const [schoolYear, setSchoolYear] = useState("");
+  const [school, setSchool] = useState("");
+  const [education, setEducation] = useState("");
 
   function addSchool(e) {
     e.preventDefault();
@@ -27,6 +27,9 @@ function Education() {
         id: Math.random() * 1000,
       },
     ]);
+    setSchool("");
+    setEducation("");
+    setSchoolYear("");
   }
 
   return (
@@ -58,21 +61,24 @@ function Education() {
             <ExperienceInfoParagraph>
               <InputContainer
                 onChange={(e) => setSchoolYear(e.target.value)}
-                placeholder={schoolYear}
+                placeholder="år"
+                value={schoolYear}
                 type="text"
               ></InputContainer>
             </ExperienceInfoParagraph>
             <ExperienceInfoParagraph>
               <InputContainer
                 onChange={(e) => setSchool(e.target.value)}
-                placeholder={school}
+                placeholder="skole"
+                value={school}
                 type="text"
               ></InputContainer>
             </ExperienceInfoParagraph>
             <ExperienceInfoParagraph>
               <InputContainer
                 onChange={(e) => setEducation(e.target.value)}
-                placeholder={education}
+                placeholder="studie"
+                value={education}
                 type="text"
               ></InputContainer>
               <AddButton onClick={addSchool} schools={schools} className="show">
