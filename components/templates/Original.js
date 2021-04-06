@@ -83,6 +83,13 @@ const Other = styled.p`
 const AddButton = styled.button`
   position: absolute;
   right: 0;
+  background-color: green;
+  color: white;
+  font-size: 18px;
+  padding: 0 3px 0 3px;
+  border: none;
+  box-shadow: 1px 1px 2px grey;
+  cursor: pointer;
 `;
 
 const InputContainer = styled.input`
@@ -120,14 +127,16 @@ const ImageText = styled.div`
 `;
 
 function Original() {
-  const [title, setTitle] = useState("Ditt nav");
+  const [title, setTitle] = useState("Ditt navn");
   const [email, setEmail] = useState("email@email.no");
   const [mobile, setMobile] = useState("+47 00000000");
   const [dob, setDob] = useState("dato/måned/år");
   const [website, setWebsite] = useState("https://www.example.no");
   const [github, setGithub] = useState("https://www.github.com/Username");
   const [address, setAddress] = useState("adresse, postnummer, by");
-  const [qualifications, setQualifications] = useState("nøkkelkvalifikasjoner");
+  const [qualifications, setQualifications] = useState(
+    "dine nøkkelkvalifikasjoner"
+  );
   const [experience, setExperience] = useState([]);
   const [year, setYear] = useState("år");
   const [company, setCompany] = useState("firma");
