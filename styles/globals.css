@@ -26,10 +26,6 @@ body {
   background-color: transparent;
 }
 
-input::placeholder {
-  text-align: center;
-}
-
 textarea::placeholder {
   padding: 5px 0 0 5px;
 }
