@@ -5,6 +5,9 @@ import styled from "styled-components";
 const Headline = styled.h1`
   margin: 10px 0;
   font-size: 22px;
+  @media (max-width: 650px) {
+    margin-left: 20px;
+  }
 `;
 
 const HeaderContainer = styled.div`

@@ -66,7 +66,7 @@ function Other() {
             <ExperienceInfoParagraph>
               <InputContainer
                 onChange={(e) => setHobbies(e.target.value)}
-                placeholder="musikk, sport, film og spill"
+                placeholder="musikk, film og spill"
                 value={hobbies}
                 type="text"
               ></InputContainer>

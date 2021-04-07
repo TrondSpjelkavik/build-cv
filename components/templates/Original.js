@@ -18,6 +18,9 @@ export const DetailsContainer = styled.table`
     break-inside: avoid;
     page-break-inside: avoid;
   }
+  @media (max-width: 645px) {
+    margin: 0 10px 0 10px;
+  }
 `;
 export const SubContainer = styled.tr`
   align-items: center;
@@ -50,6 +53,9 @@ export const SubSubHeadline = styled.h2`
   margin: 10px 0px 0px 0px;
   font-weight: 400;
   font-size: 18px;
+  @media (max-width: 645px) {
+    margin-left: 20px;
+  }
 `;
 
 export const Experience = styled.tbody`
@@ -66,6 +72,9 @@ export const AddButton = styled.button`
   border: none;
   box-shadow: 1px 1px 2px grey;
   cursor: pointer;
+  @media (max-width: 645px) {
+    right: 10px;
+  }
 `;
 
 export const RemoveButton = styled.td`
@@ -79,6 +88,9 @@ export const RemoveButton = styled.td`
   border: none;
   box-shadow: 1px 1px 2px grey;
   cursor: pointer;
+  @media (max-width: 645px) {
+    right: 10px;
+  }
 `;
 
 export const InputContainer = styled.input`

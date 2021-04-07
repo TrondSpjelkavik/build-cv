@@ -37,9 +37,9 @@ function ContactInfo() {
   const [email, setEmail] = useState("email@email.no");
   const [mobile, setMobile] = useState("+47 00000000");
   const [dob, setDob] = useState("dato/måned/år");
-  const [website, setWebsite] = useState("https://www.example.no");
+  const [website, setWebsite] = useState("www.example.no");
   const [github, setGithub] = useState("Github/username");
-  const [address, setAddress] = useState("adresse, postnummer, by");
+  const [address, setAddress] = useState("adresse");
 
   return (
     <DetailsContainer>
