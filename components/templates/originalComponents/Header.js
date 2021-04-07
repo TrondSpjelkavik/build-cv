@@ -8,6 +8,9 @@ const Headline = styled.h1`
   @media (max-width: 650px) {
     margin-left: 20px;
   }
+  @media print {
+    margin-left: 0px; !important
+  }
 `;
 
 const HeaderContainer = styled.div`

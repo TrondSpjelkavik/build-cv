@@ -56,6 +56,9 @@ export const SubSubHeadline = styled.h2`
   @media (max-width: 645px) {
     margin-left: 20px;
   }
+  @media print {
+    margin-left: 0px; !important
+  }
 `;
 
 export const Experience = styled.tbody`

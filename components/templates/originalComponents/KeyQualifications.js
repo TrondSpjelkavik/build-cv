@@ -9,12 +9,18 @@ const KeyHeadline = styled.h2`
   @media (max-width: 645px) {
     margin-left: 20px;
   }
+  @media print {
+    margin-left: 0px; !important
+  }
 `;
 
 const KeyInput = styled.div`
   font-size: 16px;
   @media (max-width: 645px) {
     margin-left: 20px;
+  }
+  @media print {
+    margin-left: 0px; !important
   }
 `;
 

@@ -25,7 +25,7 @@ const PrintPreview = styled.button`
   }
 `;
 
-export default function Home() {
+function build() {
   // TODO: Beautify add and remove buttons. Color on "Legg til bilde"?
   // TODO:
 
@@ -46,3 +46,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default build;

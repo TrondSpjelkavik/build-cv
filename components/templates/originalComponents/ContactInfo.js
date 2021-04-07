@@ -12,6 +12,7 @@ const ContactInfoParagraph = styled.td`
   display: flex;
   width: 500px;
   justify-content: space-between;
+
   @media (max-width: 645px) {
     width: 350px;
   }
@@ -27,9 +28,13 @@ const ContactInput = styled.input`
 `;
 
 const ContentBody = styled.tbody`
+  display: table-row-group;
   @media (max-width: 645px) {
     display: flex;
     flex-direction: column;
+  }
+  @media print {
+    display: table-row-group; !important
   }
 `;
 
