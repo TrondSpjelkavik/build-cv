@@ -8,6 +8,7 @@ const PrintPreview = styled.button`
   position: fixed;
   bottom: 20px;
   right: 50px;
+  z-index: 999;
   padding: 5px 10px 5px 10px;
   color: white;
   background-color: green;
