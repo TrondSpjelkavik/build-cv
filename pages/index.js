@@ -19,6 +19,9 @@ const PrintPreview = styled.button`
   &:hover {
     background-color: darkgreen;
   }
+  @media (max-width: 645px) {
+    right: 10px;
+  }
 `;
 
 export default function Home() {

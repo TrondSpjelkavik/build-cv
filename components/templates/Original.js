@@ -13,6 +13,7 @@ export const DetailsContainer = styled.table`
   margin: 20px 0;
   border-collapse: collapse;
   justify-content: space-around;
+
   @media print {
     break-inside: avoid;
     page-break-inside: avoid;
@@ -20,6 +21,9 @@ export const DetailsContainer = styled.table`
 `;
 export const SubContainer = styled.tr`
   align-items: center;
+  @media (max-width: 645px) {
+    margin: 0 auto;
+  }
 `;
 
 export const ExperienceInfoParagraph = styled.td`
@@ -86,6 +90,9 @@ export const InputContainer = styled.input`
   }
   &::placeholder {
     text-align: center;
+  }
+  @media (max-width: 645px) {
+    width: 100px;
   }
 `;
 

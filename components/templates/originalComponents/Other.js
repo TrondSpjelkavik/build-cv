@@ -85,6 +85,7 @@ function Other() {
           </SubContainer>
         </Experience>
       </DetailsContainer>
+      <div style={{ marginBottom: "100px" }}></div>
     </>
   );
 }

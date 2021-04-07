@@ -12,6 +12,9 @@ const ContactInfoParagraph = styled.td`
   display: flex;
   width: 500px;
   justify-content: space-between;
+  @media (max-width: 645px) {
+    width: 350px;
+  }
 `;
 
 const ContactInput = styled.input`
@@ -23,17 +26,24 @@ const ContactInput = styled.input`
   }
 `;
 
+const ContentBody = styled.tbody`
+  @media (max-width: 645px) {
+    display: flex;
+    flex-direction: column;
+  }
+`;
+
 function ContactInfo() {
   const [email, setEmail] = useState("email@email.no");
   const [mobile, setMobile] = useState("+47 00000000");
   const [dob, setDob] = useState("dato/måned/år");
   const [website, setWebsite] = useState("https://www.example.no");
-  const [github, setGithub] = useState("https://www.github.com/Username");
+  const [github, setGithub] = useState("Github/username");
   const [address, setAddress] = useState("adresse, postnummer, by");
 
   return (
     <DetailsContainer>
-      <tbody>
+      <ContentBody>
         <SubContainer>
           <ContactInfoParagraphHeadline>E-post:</ContactInfoParagraphHeadline>
           <ContactInfoParagraph>
@@ -116,7 +126,7 @@ function ContactInfo() {
             ></ContactInput>
           </ContactInfoParagraph>
         </SubContainer>
-      </tbody>
+      </ContentBody>
     </DetailsContainer>
   );
 }

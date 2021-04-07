@@ -6,10 +6,16 @@ const KeyHeadline = styled.h2`
   margin: 0px 0 0px 0;
   font-weight: 400;
   font-size: 18px;
+  @media (max-width: 645px) {
+    margin-left: 20px;
+  }
 `;
 
 const KeyInput = styled.div`
   font-size: 16px;
+  @media (max-width: 645px) {
+    margin-left: 20px;
+  }
 `;
 
 const TextInput = styled.textarea`

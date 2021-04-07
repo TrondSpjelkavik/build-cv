@@ -5,6 +5,11 @@ import styled from "styled-components";
 
 const ImageContainer = styled.div`
   margin-bottom: 10px;
+  @media (max-width: 645px) {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 30px 0;
+  }
 `;
 
 const HideImage = styled.img`
@@ -27,6 +32,9 @@ const AddImageButton = styled.button`
 
 const ImageText = styled.div`
   margin-top: 10px;
+  @media (max-width: 645px) {
+    margin-left: 10px;
+  }
 `;
 
 function AddImage() {
