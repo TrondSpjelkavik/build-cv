@@ -64,6 +64,19 @@ export const AddButton = styled.button`
   cursor: pointer;
 `;
 
+export const RemoveButton = styled.td`
+  position: absolute;
+  right: 0;
+  margin-top: 5px;
+  padding: 0 4px 0 4px;
+  background-color: red;
+  color: white;
+  font-size: 16px;
+  border: none;
+  box-shadow: 1px 1px 2px grey;
+  cursor: pointer;
+`;
+
 export const InputContainer = styled.input`
   border: none;
   border-bottom: 1px solid black;

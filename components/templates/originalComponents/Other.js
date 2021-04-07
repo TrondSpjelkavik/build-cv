@@ -8,6 +8,7 @@ import {
   ExperienceInfoParagraphHeadline,
   AddButton,
   InputContainer,
+  RemoveButton,
 } from "../Original";
 
 function Other() {
@@ -50,6 +51,14 @@ function Other() {
               <ExperienceInfoParagraph>
                 {xp.certificates}
               </ExperienceInfoParagraph>
+              <RemoveButton
+                onClick={() =>
+                  setOthers(other.filter((test) => test.id !== xp.id))
+                }
+                className="show"
+              >
+                <div style={{ paddingBottom: "3px" }}>x</div>
+              </RemoveButton>
             </SubContainer>
           ))}
 

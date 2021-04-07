@@ -1,3 +1,4 @@
+import { execOnce } from "next/dist/next-server/lib/utils";
 import { useState } from "react";
 import {
   DetailsContainer,
@@ -8,6 +9,7 @@ import {
   ExperienceInfoParagraphHeadline,
   AddButton,
   InputContainer,
+  RemoveButton,
 } from "../Original";
 
 function WorkExperience() {
@@ -54,6 +56,14 @@ function WorkExperience() {
               <ExperienceInfoParagraph>{xp.year}</ExperienceInfoParagraph>
               <ExperienceInfoParagraph>{xp.company}</ExperienceInfoParagraph>
               <ExperienceInfoParagraph>{xp.position}</ExperienceInfoParagraph>
+              <RemoveButton
+                onClick={() =>
+                  setExperience(experience.filter((test) => test.id !== xp.id))
+                }
+                className="show"
+              >
+                <div style={{ paddingBottom: "3px" }}>x</div>
+              </RemoveButton>
             </SubContainer>
           ))}
 

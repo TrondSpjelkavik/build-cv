@@ -8,6 +8,7 @@ import {
   ExperienceInfoParagraphHeadline,
   AddButton,
   InputContainer,
+  RemoveButton,
 } from "../Original";
 
 function Courses() {
@@ -48,6 +49,14 @@ function Courses() {
             <SubContainer key={xp.id}>
               <ExperienceInfoParagraph>{xp.year}</ExperienceInfoParagraph>
               <ExperienceInfoParagraph>{xp.course}</ExperienceInfoParagraph>
+              <RemoveButton
+                onClick={() =>
+                  setCourses(courses.filter((test) => test.id !== xp.id))
+                }
+                className="show"
+              >
+                <div style={{ paddingBottom: "3px" }}>x</div>
+              </RemoveButton>
             </SubContainer>
           ))}
 
