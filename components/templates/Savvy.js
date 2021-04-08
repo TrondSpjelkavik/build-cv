@@ -10,12 +10,32 @@ const Container = styled.main`
   background-color: #1c4966;
   min-height: 100vh;
   padding-left: 100px;
+  @media (max-width: 645px) {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  @media print {
+    padding-left: 100px;
+    display: block;
+  }
 `;
 
 const Content = styled.div`
   background-color: white;
   min-height: 70vh;
   max-width: 700px;
+  @media (max-width: 800px) {
+    max-width: 500px;
+  }
+  @media (max-width: 645px) {
+    max-width: 320px;
+  }
+  @media print {
+    max-width: 700px;
+  }
 `;
 
 export const Headlines = styled.h2`
@@ -24,6 +44,8 @@ export const Headlines = styled.h2`
 `;
 
 function Savvy() {
+  // TODO: Add an information button about print graphics
+
   return (
     <Container>
       <Header />

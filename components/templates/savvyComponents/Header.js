@@ -6,6 +6,13 @@ import styled from "styled-components";
 const Headline = styled.h1`
   font-family: "Cormorant Garamond", serif;
   padding: 5px 0;
+  font-size: 32px;
+  @media (max-width: 645px) {
+    font-size: 20px;
+  }
+  @media print {
+    font-size: 32px;
+  }
 `;
 
 const HeaderContent = styled.header`

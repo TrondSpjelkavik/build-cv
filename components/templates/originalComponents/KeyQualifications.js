@@ -29,6 +29,9 @@ export const TextInput = styled.textarea`
   height: 80px;
   margin: 10px 0 10px 0;
   color: grey;
+  @media (max-width: 645px) {
+    width: 250px;
+  }
 `;
 
 const KeyValues = styled.div`
