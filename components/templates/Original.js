@@ -99,6 +99,7 @@ export const RemoveButton = styled.td`
 export const InputContainer = styled.input`
   border: none;
   border-bottom: 1px solid black;
+  color: grey;
   &:focus {
     outline: none;
     border-bottom: 2px solid black;

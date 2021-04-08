@@ -24,10 +24,11 @@ const KeyInput = styled.div`
   }
 `;
 
-const TextInput = styled.textarea`
+export const TextInput = styled.textarea`
   width: 300px;
   height: 80px;
   margin: 10px 0 10px 0;
+  color: grey;
 `;
 
 const KeyValues = styled.div`

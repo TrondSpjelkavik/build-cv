@@ -4,7 +4,7 @@ import ReactToPrint from "react-to-print";
 
 import styled from "styled-components";
 
-const PrintPreview = styled.button`
+export const PrintPreview = styled.button`
   position: fixed;
   bottom: 20px;
   right: 50px;
