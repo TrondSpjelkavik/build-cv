@@ -79,7 +79,7 @@ function FrontPage() {
     }
     if (img === "https://www.t-dev.no/api/skill/savvy.PNG") {
       setImg("https://www.t-dev.no/api/skill/org.PNG");
-      setPage("/org");
+      setPage("/orginal");
       setTemplate("Orginal");
     }
   }
