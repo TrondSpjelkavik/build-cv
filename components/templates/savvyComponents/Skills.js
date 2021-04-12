@@ -3,18 +3,21 @@ import { Headlines } from "../Savvy";
 
 import styled from "styled-components";
 
+//TODO: Se the difference between Skills and Work experience
+
 const SkillsContent = styled.div`
   padding: 20px 20px 0px 20px;
 `;
 
 export const InputBox = styled.ul`
-  padding-left: 40px;
+  padding-left: 0px;
   display: flex;
   flex-direction: column;
 `;
 
 export const List = styled.li`
   padding: 3px 0;
+  margin-left: 20px;
 `;
 
 export const SkillsInput = styled.input`

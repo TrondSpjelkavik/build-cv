@@ -10,6 +10,7 @@ const Container = styled.main`
   background-color: #1c4966;
   min-height: 100vh;
   padding-left: 100px;
+
   @media (max-width: 645px) {
     padding: 0;
     display: flex;
@@ -27,6 +28,7 @@ const Content = styled.div`
   background-color: white;
   min-height: 70vh;
   max-width: 700px;
+
   @media (max-width: 800px) {
     max-width: 500px;
   }

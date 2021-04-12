@@ -20,7 +20,7 @@ export const ExperienceInput = styled.input`
   border: none;
   border-bottom: 1px solid black;
   width: 150px;
-  margin-left: 10px;
+  margin-left: 0px;
   background: transparent;
   color: grey;
 
@@ -105,7 +105,6 @@ function WorkExperience() {
         </div>
       </InputContainer>
       <InputContainer>
-        <SubHeadline>{company}</SubHeadline>
         <ExperienceInput
           onChange={(e) => setCompany(e.target.value)}
           placeholder="Firma"
@@ -113,7 +112,7 @@ function WorkExperience() {
           type="text"
           className="show"
         ></ExperienceInput>
-        <SubHeadline style={{ marginLeft: "10px" }}>{year}</SubHeadline>
+
         <YearInput
           onChange={(e) => setYear(e.target.value)}
           placeholder="år"
@@ -126,7 +125,7 @@ function WorkExperience() {
         <div>
           <SkillsInput
             onChange={(e) => setDetail(e.target.value)}
-            placeholder="Detailer"
+            placeholder="Detaljer"
             value={detail}
             type="text"
             className="show"

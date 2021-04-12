@@ -7,7 +7,7 @@ import { PrintPreview } from "./index";
 
 import styled from "styled-components";
 
-const Information = styled.div`
+export const Information = styled.div`
   position: fixed;
   bottom: 22px;
   right: 210px;
@@ -24,7 +24,7 @@ const Information = styled.div`
   cursor: pointer;
 `;
 
-const InformationContent = styled.div`
+export const InformationContent = styled.div`
   display: ${({ open }) => (open ? "none" : "flex")};
   align-item: center;
   justify-content: center;
