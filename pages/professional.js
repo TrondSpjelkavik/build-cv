@@ -3,7 +3,7 @@ import Meta from "../components/Layout/Meta";
 import Professional from "../components/templates/Professional";
 import ReactToPrint from "react-to-print";
 
-import { PrintPreview } from "./index";
+import { PrintPreview } from "./savvy";
 import { Information, InformationContent } from "./savvy";
 
 function professional() {

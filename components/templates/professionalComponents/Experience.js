@@ -64,6 +64,22 @@ function Experience() {
       },
     ]);
     setSkill("");
+    setLevel("Din ferdighet");
+    resetRadio();
+  }
+
+  function resetRadio() {
+    const radio1 = document.querySelector(".radio-little");
+    const radio2 = document.querySelector(".radio-medium");
+    const radio3 = document.querySelector(".radio-good");
+    const radio4 = document.querySelector(".radio-veryGood");
+    const radio5 = document.querySelector(".radio-expert");
+
+    radio1.checked = false;
+    radio2.checked = false;
+    radio3.checked = false;
+    radio4.checked = false;
+    radio5.checked = false;
   }
 
   function expert() {

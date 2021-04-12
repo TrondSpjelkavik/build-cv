@@ -36,6 +36,7 @@ const ContentBody = styled.tbody`
   }
   @media print {
     display: table-row-group; !important
+   
   }
 `;
 

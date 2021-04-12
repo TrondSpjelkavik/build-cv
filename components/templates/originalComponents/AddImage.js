@@ -72,8 +72,8 @@ function AddImage() {
                 <HideImage
                   src={image["data_url"]}
                   alt=""
-                  width="150"
-                  height="150"
+                  width="135"
+                  height="135"
                   className="hidden"
                 />
               </div>

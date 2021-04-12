@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Headlines } from "../Savvy";
-import { InputBox, SkillsInput, AddButton, List } from "./Skills";
+import { InputBox, SkillsInput, AddButton } from "./Skills";
 
 import styled from "styled-components";
 
@@ -12,6 +12,10 @@ export const InputContainer = styled.div`
   display: flex;
   align-items: center;
   padding: 5px 0;
+`;
+
+const List = styled.li`
+  padding: 4px 0 10px 0;
 `;
 
 export const SubHeadline = styled.h4``;

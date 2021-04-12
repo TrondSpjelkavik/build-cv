@@ -16,6 +16,10 @@ const Headline = styled.h1`
 const HeaderContainer = styled.div`
   display: flex;
   border-bottom: 2px solid black;
+  @media print {
+    margin-bottom: 20px; !important
+  }
+ 
 `;
 
 function Header() {

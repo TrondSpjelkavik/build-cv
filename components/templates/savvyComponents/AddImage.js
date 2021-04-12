@@ -14,6 +14,8 @@ const ImageContainer = styled.div`
 const HideImage = styled.img`
   border-radius: 50%;
   display: none;
+  height: 175px;
+  width: 175px;
   @media print {
     display: block !important;
   }
@@ -69,12 +71,7 @@ function AddImage() {
                 Bilde: <b>{image.file.name}</b>
               </ImageText>
               <div key={index}>
-                <HideImage
-                  src={image["data_url"]}
-                  alt=""
-                  width="200"
-                  height="200"
-                />
+                <HideImage src={image["data_url"]} alt="" />
               </div>
             </div>
           ))}

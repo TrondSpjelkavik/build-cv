@@ -28,6 +28,22 @@ function Language() {
       },
     ]);
     setLanguage("");
+    setKnowledge("Dine språkkunnskaper");
+    resetRadio();
+  }
+
+  function resetRadio() {
+    const radio1 = document.querySelector(".radio-1");
+    const radio2 = document.querySelector(".radio-2");
+    const radio3 = document.querySelector(".radio-3");
+    const radio4 = document.querySelector(".radio-4");
+    const radio5 = document.querySelector(".radio-5");
+
+    radio1.checked = false;
+    radio2.checked = false;
+    radio3.checked = false;
+    radio4.checked = false;
+    radio5.checked = false;
   }
 
   function expert() {

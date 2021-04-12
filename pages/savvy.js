@@ -3,9 +3,28 @@ import Meta from "../components/Layout/Meta";
 import Savvy from "../components/templates/Savvy";
 import ReactToPrint from "react-to-print";
 
-import { PrintPreview } from "./index";
-
 import styled from "styled-components";
+
+export const PrintPreview = styled.button`
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+  z-index: 999;
+  padding: 5px 10px 5px 10px;
+  color: white;
+  background-color: green;
+  border: none;
+  box-shadow: 1px 1px 1px black;
+  font-size: 18px;
+  font-family: "Lato", sans-serif;
+  cursor: pointer;
+  &:hover {
+    background-color: darkgreen;
+  }
+  @media (max-width: 645px) {
+    right: 10px;
+  }
+`;
 
 export const Information = styled.div`
   position: fixed;

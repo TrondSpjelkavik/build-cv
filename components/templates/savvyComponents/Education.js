@@ -7,11 +7,15 @@ import {
   ExperienceInput,
   YearInput,
 } from "./WorkExperience";
-import { InputBox, SkillsInput, AddButton, List } from "./Skills";
+import { InputBox, SkillsInput, AddButton } from "./Skills";
 import styled from "styled-components";
 
 const EducationContainer = styled.div`
   padding: 20px 20px 20px 20px;
+`;
+
+const List = styled.li`
+  padding: 4px 0 10px 0;
 `;
 
 function Education() {

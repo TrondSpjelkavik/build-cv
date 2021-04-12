@@ -58,7 +58,9 @@ function About() {
           type="email"
         ></ExperienceInput>
         <h4>Linkedin</h4>
-        <ContactInput>{linkedin}</ContactInput>
+        <ContactInput style={{ wordBreak: "break-word" }}>
+          {linkedin}
+        </ContactInput>
         <ExperienceInput
           onChange={(e) => setLinkedin(e.target.value)}
           placeholder="www.linkedin.com/username"

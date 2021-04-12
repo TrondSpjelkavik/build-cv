@@ -57,6 +57,7 @@ function Savvy() {
         <WorkExperience />
         <Education />
       </Content>
+      <div className="show" style={{ paddingBottom: "100px" }}></div>
     </Container>
   );
 }

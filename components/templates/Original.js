@@ -24,7 +24,7 @@ export const DetailsContainer = styled.table`
 `;
 export const SubContainer = styled.tr`
   align-items: center;
-  @media (max-width: 645px) {
+  margin-top: 1 @media (max-width: 645px) {
     margin: 0 auto;
   }
 `;
@@ -123,6 +123,7 @@ function Original() {
       <Education />
       <Courses />
       <Other />
+      <div className="show" style={{ paddingBottom: "100px" }}></div>
     </Container>
   );
 }
