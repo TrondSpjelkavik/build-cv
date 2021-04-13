@@ -80,6 +80,12 @@ const TemplateHeadline = styled.p`
   top: 150px;
   left: 50%;
   transform: translateX(-50%);
+  @media (max-height: 961px) {
+    top: 100px;
+  }
+  @media (max-height: 746px) {
+    top: 60px;
+  }
 `;
 
 function FrontPage() {
