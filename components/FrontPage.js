@@ -3,16 +3,46 @@ import Link from "next/link";
 
 import styled from "styled-components";
 
-const Header = styled.main`
+const Header = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 20vh;
+  min-height: 20vh;
+  flex-direction: column;
+  h2 {
+    padding-top: 40px;
+    font-weight: 400;
+  }
+`;
+
+const UpperHalf = styled.div`
+  display: flex;
+  flex: 1;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 30vh;
   width: 100%;
+  background-color: #156781;
+`;
+
+const LowerHalf = styled.div`
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  width: 100%;
+  background-color: #12323d;
+  position: relative;
 `;
 
 const Templates = styled.div`
-  position: relative;
+  position: absolute;
+  z-index: 999;
+  top: 25%;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,6 +68,9 @@ const LeftArrow = styled.div`
   margin-right: 100px;
   cursor: pointer;
   font-size: 40px;
+  &:hover {
+    color: lightgrey;
+  }
 `;
 
 const RightArrow = styled.div`
@@ -45,12 +78,14 @@ const RightArrow = styled.div`
   margin-left: 100px;
   cursor: pointer;
   font-size: 40px;
+  &:hover {
+    color: lightgrey;
+  }
 `;
 
 const Container = styled.main`
   background-color: #156781;
   color: white;
-  min-height: 100vh;
 `;
 
 const TemplateHeadline = styled.p`
@@ -105,21 +140,25 @@ function FrontPage() {
   return (
     <Container>
       <Header>
-        <h1>Lag din egen CV fra maler</h1>
+        <h1>Lag din egen CV</h1>
+        <h2>Velg en mal og begynn å bygg din CV</h2>
       </Header>
-      <Templates>
-        <div>
-          <LeftArrow onClick={arrowLeft}>❮</LeftArrow>
-        </div>
-        <Link href={pages}>
-          <Images src={img}></Images>
-        </Link>
+      <UpperHalf>
+        <Templates>
+          <div>
+            <LeftArrow onClick={arrowLeft}>❮</LeftArrow>
+          </div>
+          <Link href={pages}>
+            <Images src={img}></Images>
+          </Link>
 
-        <RightArrow style={{ marginLeft: "50px" }} onClick={arrowRight}>
-          ❯
-        </RightArrow>
-      </Templates>
-      <TemplateHeadline>{template}</TemplateHeadline>
+          <RightArrow style={{ marginLeft: "50px" }} onClick={arrowRight}>
+            ❯
+          </RightArrow>
+        </Templates>
+        <TemplateHeadline>{template}</TemplateHeadline>
+      </UpperHalf>
+      <LowerHalf></LowerHalf>
     </Container>
   );
 }
