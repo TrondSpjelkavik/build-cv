@@ -190,8 +190,8 @@ function Experience() {
       <Foo>
         <div style={{ paddingTop: "10px" }}>
           {skills.map((skill) => (
-            <>
-              <div style={{ display: "flex" }} key={skill.id}>
+            <div key={skill.id}>
+              <div style={{ display: "flex" }}>
                 <p>{skill.skill}</p>
                 <RemoveButton
                   className="show"
@@ -223,7 +223,7 @@ function Experience() {
               >
                 {skill.level}
               </RadioInput>
-            </>
+            </div>
           ))}
           <SkillsInput
             onChange={(e) => setSkill(e.target.value)}

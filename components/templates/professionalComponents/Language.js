@@ -135,7 +135,7 @@ function Language() {
       </h3>
       <div style={{ paddingTop: "10px" }}>
         {languages.map((skill) => (
-          <>
+          <div key={skill.id}>
             <div style={{ display: "flex" }} key={skill.id}>
               <p>{skill.language}</p>
               <RemoveButton
@@ -168,7 +168,7 @@ function Language() {
             >
               {skill.knowledge}
             </RadioInput>
-          </>
+          </div>
         ))}
 
         <SkillsInput
