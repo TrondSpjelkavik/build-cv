@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { RemoveButton } from "../savvyComponents/Skills";
 
 import styled from "styled-components";
 
@@ -11,7 +10,7 @@ export const SkillsInput = styled.input`
   width: 150px;
   background: transparent;
   color: grey;
-  padding-top: 10px;
+  padding-top: 20px;
   &:focus {
     outline: none;
     border-bottom: 2px solid black;
@@ -28,6 +27,18 @@ export const AddButton = styled.button`
   font-size: 18px;
   margin-left: 10px;
   padding: 0 3px 0 3px;
+  border: none;
+  box-shadow: 1px 1px 2px grey;
+  cursor: pointer;
+`;
+
+export const RemoveButton = styled.button`
+  margin-left: 5px;
+  margin-bottom: 5px;
+  padding: 0 4px 0 4px;
+  background-color: red;
+  color: white;
+  font-size: 16px;
   border: none;
   box-shadow: 1px 1px 2px grey;
   cursor: pointer;
@@ -179,16 +190,18 @@ function Experience() {
       <Foo>
         <div style={{ paddingTop: "10px" }}>
           {skills.map((skill) => (
-            <div key={skill.id}>
-              <p>{skill.skill}</p>
-              <RemoveButton
-                className="show"
-                onClick={() =>
-                  setSkills(skills.filter((test) => test.id !== skill.id))
-                }
-              >
-                x
-              </RemoveButton>
+            <>
+              <div style={{ display: "flex" }} key={skill.id}>
+                <p>{skill.skill}</p>
+                <RemoveButton
+                  className="show"
+                  onClick={() =>
+                    setSkills(skills.filter((test) => test.id !== skill.id))
+                  }
+                >
+                  x
+                </RemoveButton>
+              </div>
               <div
                 className="skillPoints"
                 style={{
@@ -199,6 +212,7 @@ function Experience() {
               >
                 <img src={skill.points}></img>
               </div>
+
               <RadioInput
                 style={{
                   paddingTop: "5px",
@@ -209,7 +223,7 @@ function Experience() {
               >
                 {skill.level}
               </RadioInput>
-            </div>
+            </>
           ))}
           <SkillsInput
             onChange={(e) => setSkill(e.target.value)}

@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { RadioInput, SkillsInput, AddButton } from "./Experience";
-import { RemoveButton } from "../savvyComponents/Skills";
+import { RadioInput, SkillsInput, AddButton, RemoveButton } from "./Experience";
 
 import styled from "styled-components";
 
@@ -136,16 +135,18 @@ function Language() {
       </h3>
       <div style={{ paddingTop: "10px" }}>
         {languages.map((skill) => (
-          <div key={skill.id}>
-            <p>{skill.language}</p>
-            <RemoveButton
-              className="show"
-              onClick={() =>
-                setLanguages(languages.filter((test) => test.id !== skill.id))
-              }
-            >
-              x
-            </RemoveButton>
+          <>
+            <div style={{ display: "flex" }} key={skill.id}>
+              <p>{skill.language}</p>
+              <RemoveButton
+                className="show"
+                onClick={() =>
+                  setLanguages(languages.filter((test) => test.id !== skill.id))
+                }
+              >
+                x
+              </RemoveButton>
+            </div>
             <div
               className="skillPoints"
               style={{
@@ -156,6 +157,7 @@ function Language() {
             >
               <img src={skill.points}></img>
             </div>
+
             <RadioInput
               style={{
                 paddingTop: "5px",
@@ -166,7 +168,7 @@ function Language() {
             >
               {skill.knowledge}
             </RadioInput>
-          </div>
+          </>
         ))}
 
         <SkillsInput
