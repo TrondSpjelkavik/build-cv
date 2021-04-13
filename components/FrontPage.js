@@ -23,6 +23,7 @@ const Templates = styled.div`
 const Images = styled.img`
   transition: all 0.3s;
   height: 600px;
+  width: 400px;
   transform: scale(1);
   cursor: pointer;
   &:hover {
