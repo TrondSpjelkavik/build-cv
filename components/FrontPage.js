@@ -22,6 +22,7 @@ const Templates = styled.div`
 
 const Images = styled.img`
   transition: all 0.3s;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   height: 600px;
   width: 400px;
   transform: scale(1);
@@ -33,12 +34,14 @@ const Images = styled.img`
 `;
 
 const LeftArrow = styled.div`
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   margin-right: 100px;
   cursor: pointer;
   font-size: 40px;
 `;
 
 const RightArrow = styled.div`
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   margin-left: 100px;
   cursor: pointer;
   font-size: 40px;

@@ -68,7 +68,6 @@ function Education() {
         </div>
       </InputContainer>
       <InputContainer>
-        <SubHeadline>{school}</SubHeadline>
         <ExperienceInput
           onChange={(e) => setSchool(e.target.value)}
           placeholder="Skole"
@@ -76,7 +75,7 @@ function Education() {
           type="text"
           className="show"
         ></ExperienceInput>
-        <SubHeadline style={{ marginLeft: "10px" }}>{year}</SubHeadline>
+
         <YearInput
           onChange={(e) => setYear(e.target.value)}
           placeholder="år"

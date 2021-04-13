@@ -24,6 +24,7 @@ export const DetailsContainer = styled.table`
 `;
 export const SubContainer = styled.tr`
   align-items: center;
+
   margin-top: 1 @media (max-width: 645px) {
     margin: 0 auto;
   }
