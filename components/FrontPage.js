@@ -11,7 +11,7 @@ const Container = styled.main`
 `;
 
 const Headline = styled.h1`
-  position: fixed;
+  position: absolute;
   font-family: "Open Sans", sans-serif;
   top: 20%;
   padding-right: 100px;
@@ -23,7 +23,7 @@ const MainImage = styled.img``;
 
 const Button = styled.button`
   border: 0;
-  position: fixed;
+  position: absolute;
   margin-bottom: 100px;
   background-color: #2995c2;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
