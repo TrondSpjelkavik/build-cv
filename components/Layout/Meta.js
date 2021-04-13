@@ -17,7 +17,7 @@ function Meta({ font, title }) {
 Meta.defaultProps = {
   font:
     "https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap",
-  title: "Build a CV",
+  title: "Bygg din egen CV",
 };
 
 export default Meta;
