@@ -44,6 +44,20 @@ const RightArrow = styled.div`
   font-size: 40px;
 `;
 
+const Container = styled.main`
+  background-color: #156781;
+  color: white;
+  min-height: 100vh;
+`;
+
+const TemplateHeadline = styled.p`
+  font-size: 22px;
+  padding: 20px 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+`;
+
 function FrontPage() {
   const [img, setImg] = useState("https://www.t-dev.no/api/skill/prof.PNG");
   const [pages, setPage] = useState("/professional");
@@ -86,7 +100,7 @@ function FrontPage() {
   }
 
   return (
-    <>
+    <Container>
       <Header>
         <h1>Lag din egen CV fra maler</h1>
       </Header>
@@ -102,16 +116,8 @@ function FrontPage() {
           ❯
         </RightArrow>
       </Templates>
-      <p
-        style={{
-          position: "absolute",
-          left: "50%",
-          transform: "translateX(-50%)",
-        }}
-      >
-        {template}
-      </p>
-    </>
+      <TemplateHeadline>{template}</TemplateHeadline>
+    </Container>
   );
 }
 
