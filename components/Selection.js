@@ -18,8 +18,8 @@ const Templates = styled.div`
 const Images = styled.img`
   transition: all 0.3s;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  height: 400px;
-  width: 300px;
+  height: 500px;
+  width: 350px;
   transform: scale(1);
   cursor: pointer;
   &:hover {
@@ -88,6 +88,11 @@ const TemplateHeadline = styled.p`
   }
 `;
 
+const SelectionHeadline = styled.h1`
+  text-align: center;
+  padding-top: 2rem;
+`;
+
 function FrontPage() {
   const [img, setImg] = useState("https://www.t-dev.no/api/skill/prof.PNG");
   const [pages, setPage] = useState("/professional");
@@ -131,6 +136,7 @@ function FrontPage() {
 
   return (
     <Container>
+      <SelectionHeadline>Velg din mal</SelectionHeadline>
       <TemplateHeadline>{template}</TemplateHeadline>
       <Templates>
         <div>

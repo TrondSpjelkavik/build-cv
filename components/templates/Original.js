@@ -6,6 +6,7 @@ import WorkExperience from "./originalComponents/WorkExperience";
 import Education from "./originalComponents/Education";
 import Courses from "./originalComponents/Courses";
 import Other from "./originalComponents/Other";
+import BackButton from "../utils/BackButton";
 
 import styled from "styled-components";
 
@@ -116,6 +117,7 @@ export const InputContainer = styled.input`
 function Original() {
   return (
     <Container>
+      <BackButton />
       <Header />
       <ContactInfo />
       <AddImage />

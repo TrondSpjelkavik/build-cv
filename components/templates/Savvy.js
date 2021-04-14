@@ -3,6 +3,7 @@ import Summary from "./savvyComponents/Summary";
 import Skills from "./savvyComponents/Skills";
 import WorkExperience from "./savvyComponents/WorkExperience";
 import Education from "./savvyComponents/Education";
+import BackButton from "../utils/BackButton";
 
 import styled from "styled-components";
 
@@ -10,6 +11,10 @@ const Container = styled.main`
   background-color: #1c4966;
   min-height: 100vh;
   padding-left: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
 
   @media (max-width: 645px) {
     padding: 0;
@@ -50,6 +55,7 @@ function Savvy() {
 
   return (
     <Container>
+      <BackButton />
       <Header />
       <Content>
         <Summary />
