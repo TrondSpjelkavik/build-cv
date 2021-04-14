@@ -55,18 +55,19 @@ function Savvy() {
   // TODO: Add an information button about print graphics
 
   return (
-    <Container>
+    <>
       <Hamburger />
-
-      <Header />
-      <Content>
-        <Summary />
-        <Skills />
-        <WorkExperience />
-        <Education />
-      </Content>
-      <div className="show" style={{ paddingBottom: "100px" }}></div>
-    </Container>
+      <Container>
+        <Header />
+        <Content>
+          <Summary />
+          <Skills />
+          <WorkExperience />
+          <Education />
+        </Content>
+        <div className="show" style={{ paddingBottom: "100px" }}></div>
+      </Container>
+    </>
   );
 }
 
