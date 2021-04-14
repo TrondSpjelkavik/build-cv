@@ -6,7 +6,7 @@ import WorkExperience from "./originalComponents/WorkExperience";
 import Education from "./originalComponents/Education";
 import Courses from "./originalComponents/Courses";
 import Other from "./originalComponents/Other";
-import BackButton from "../utils/BackButton";
+import Hamburger from "../utils/Hamburger";
 
 import styled from "styled-components";
 
@@ -116,18 +116,20 @@ export const InputContainer = styled.input`
 
 function Original() {
   return (
-    <Container>
-      <BackButton />
-      <Header />
-      <ContactInfo />
-      <AddImage />
-      <KeyQualifications />
-      <WorkExperience />
-      <Education />
-      <Courses />
-      <Other />
-      <div className="show" style={{ paddingBottom: "100px" }}></div>
-    </Container>
+    <>
+      <Hamburger />
+      <Container>
+        <Header />
+        <ContactInfo />
+        <AddImage />
+        <KeyQualifications />
+        <WorkExperience />
+        <Education />
+        <Courses />
+        <Other />
+        <div className="show" style={{ paddingBottom: "100px" }}></div>
+      </Container>
+    </>
   );
 }
 

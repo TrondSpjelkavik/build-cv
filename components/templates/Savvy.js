@@ -3,7 +3,8 @@ import Summary from "./savvyComponents/Summary";
 import Skills from "./savvyComponents/Skills";
 import WorkExperience from "./savvyComponents/WorkExperience";
 import Education from "./savvyComponents/Education";
-import BackButton from "../utils/BackButton";
+
+import Hamburger from "../utils/Hamburger";
 
 import styled from "styled-components";
 
@@ -55,7 +56,8 @@ function Savvy() {
 
   return (
     <Container>
-      <BackButton />
+      <Hamburger />
+
       <Header />
       <Content>
         <Summary />

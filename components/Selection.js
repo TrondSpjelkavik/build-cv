@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
+import Hamburger from "../components/utils/Hamburger";
 
 import styled from "styled-components";
 
@@ -58,12 +59,6 @@ const LeftWoman = styled.img`
   position: absolute;
   bottom: 0;
   left: 0;
-`;
-
-const SittingImage = styled.img`
-  position: absolute;
-  height: 100px;
-  right: 60px;
 `;
 
 const Container = styled.main`
@@ -136,6 +131,7 @@ function FrontPage() {
 
   return (
     <Container>
+      <Hamburger />
       <SelectionHeadline>Velg din mal</SelectionHeadline>
       <TemplateHeadline>{template}</TemplateHeadline>
       <Templates>

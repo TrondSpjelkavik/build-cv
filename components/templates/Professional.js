@@ -8,7 +8,8 @@ import Other from "./professionalComponents/Other";
 import About from "./professionalComponents/About";
 import Experience from "./professionalComponents/Experience";
 import Language from "./professionalComponents/Language";
-import BackButton from "../utils/BackButton";
+
+import Hamburger from "../utils/Hamburger";
 
 import styled from "styled-components";
 
@@ -51,7 +52,8 @@ const RadioInput = styled.div`
 function Professional() {
   return (
     <Container>
-      <BackButton></BackButton>
+      <Hamburger />
+
       <Header />
       <ContentContainer>
         <MainContainer>

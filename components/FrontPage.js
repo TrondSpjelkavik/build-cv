@@ -1,5 +1,8 @@
 import React from "react";
 import Link from "next/link";
+
+import Hamburger from "../components/utils/Hamburger";
+
 import styled from "styled-components";
 
 const Container = styled.main`
@@ -39,6 +42,7 @@ const Button = styled.button`
 function FrontPage() {
   return (
     <Container>
+      <Hamburger></Hamburger>
       <Headline>Curricula Vitae</Headline>
       <Link href="/select">
         <Button>Bygg egen CV</Button>

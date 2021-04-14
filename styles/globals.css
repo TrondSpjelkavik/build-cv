@@ -58,20 +58,12 @@ input[type="radio"]:checked:after {
   border: 1px solid #f7f7f7;
 }
 
-.testCss {
-  width: 15px;
-  height: 15px;
-  border-radius: 15px;
-  top: -2px;
-  left: -1px;
-  background-color: #ffa500;
-  content: "";
-  visibility: visible;
-  border: 1px solid #f7f7f7;
+li:hover {
+  text-decoration: underline #2995c2;
+  text-decoration-thickness: 2px;
 }
 
-.test2 {
-  width: 40px;
-  height: 30px;
-  background-color: rgb(0, 0, 0);
+.active {
+  text-decoration: underline #2995c2;
+  text-decoration-thickness: 2px;
 }
