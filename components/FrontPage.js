@@ -44,7 +44,7 @@ function FrontPage() {
     <Container>
       <Hamburger></Hamburger>
       <Headline>Curricula Vitae</Headline>
-      <Link href="/select">
+      <Link href="/templates">
         <Button>Bygg egen CV</Button>
       </Link>
       <MainImage src="./frontpage.svg"></MainImage>

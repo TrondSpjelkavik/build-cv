@@ -34,7 +34,7 @@ const HamburgerLines = styled.div`
 `;
 
 function Hamburger() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   return (
     <>

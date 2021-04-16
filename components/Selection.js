@@ -49,20 +49,21 @@ const RightArrow = styled.div`
   }
 `;
 
-const RightMan = styled.img`
+export const RightMan = styled.img`
   position: absolute;
   bottom: 0;
   right: 0;
 `;
 
-const LeftWoman = styled.img`
+export const LeftWoman = styled.img`
   position: absolute;
   bottom: 0;
   left: 0;
 `;
 
-const Container = styled.main`
+export const Container = styled.main`
   min-height: 100vh;
+
   background-image: url("./background-shape.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -83,7 +84,7 @@ const TemplateHeadline = styled.p`
   }
 `;
 
-const SelectionHeadline = styled.h1`
+export const SelectionHeadline = styled.h1`
   text-align: center;
   padding-top: 2rem;
 `;

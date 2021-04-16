@@ -4,9 +4,9 @@ import { useRouter } from "next/router";
 import styled from "styled-components";
 
 const NavContainer = styled.nav`
-  position: absolute;
-  visibility: ${({ open }) => (open ? "visible" : "hidden")};
-  transition: visibility 0.3s ease-in
+  position: fixed;
+  transform: ${({ open }) => (open ? "translateX(100%)" : "translateX(0)")};
+  transition: 0.4s linear;
   top: 0;
   right: 0;
   height: 100vh;
@@ -63,9 +63,10 @@ function HamburgerMenu({ open, setOpen }) {
             Hjem
           </NavItems>
         </Link>
-        <Link href="/select">
+
+        <Link href="/templates">
           <NavItems
-            className={router.pathname == "/select" ? "active" : ""}
+            className={router.pathname == "/templates" ? "active" : ""}
             style={{ cursor: "pointer" }}
           >
             Velg mal
