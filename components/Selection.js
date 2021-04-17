@@ -89,14 +89,17 @@ export const SelectionHeadline = styled.h1`
   padding-top: 2rem;
 `;
 
-const api = axios.create({
-  baseURL: `https://build-cv-api.appspot.com/api`,
-});
-
 function FrontPage() {
-  api.get("/").then((res) => {
-    console.log(res.data);
-  });
+  let url = "https://build-cv-api.appspot.com/api";
+
+  async function getData() {
+    let res = await fetch(url);
+    let data = await res.json();
+
+    console.log(data);
+  }
+
+  getData();
 
   const [img, setImg] = useState("https://www.t-dev.no/api/skill/prof.PNG");
   const [pages, setPage] = useState("/professional");
