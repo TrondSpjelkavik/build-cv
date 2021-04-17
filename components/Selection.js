@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
+import axios from "axios";
 import Hamburger from "../components/utils/Hamburger";
 
 import styled from "styled-components";
@@ -8,7 +9,6 @@ const Templates = styled.div`
   position: absolute;
   z-index: 999;
   top: 25%;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,7 +89,15 @@ export const SelectionHeadline = styled.h1`
   padding-top: 2rem;
 `;
 
+const api = axios.create({
+  baseURL: `https://build-cv-api.appspot.com/api`,
+});
+
 function FrontPage() {
+  api.get("/").then((res) => {
+    console.log(res.data);
+  });
+
   const [img, setImg] = useState("https://www.t-dev.no/api/skill/prof.PNG");
   const [pages, setPage] = useState("/professional");
   const [template, setTemplate] = useState("Profesjonelt");
