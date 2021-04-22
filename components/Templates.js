@@ -30,7 +30,7 @@ const TemplatesBox = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   display: flex;
-  padding-top: 2rem;
+  padding-top: 1.2rem;
 `;
 
 const TemplateImage = styled.img`
