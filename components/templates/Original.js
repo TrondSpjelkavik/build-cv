@@ -49,9 +49,6 @@ const Container = styled.div`
   max-width: 700px;
   min-height: 100vh;
   position: relative;
-  @media (max-width: 768px) {
-    display: none;
-  }
 `;
 
 export const SubSubHeadline = styled.h2`
