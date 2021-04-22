@@ -8,7 +8,6 @@ import Other from "./professionalComponents/Other";
 import About from "./professionalComponents/About";
 import Experience from "./professionalComponents/Experience";
 import Language from "./professionalComponents/Language";
-import { MobileView } from "../FrontPage";
 
 import Hamburger from "../utils/Hamburger";
 
@@ -18,9 +17,6 @@ const Container = styled.main`
   min-height: 100vh;
   max-width: 800px;
   margin: 0 auto;
-  @media (max-width: 768px) {
-    display: none;
-  }
 `;
 
 const ContentContainer = styled.div`
@@ -47,10 +43,6 @@ const PersonalInfo = styled.div`
 function Professional() {
   return (
     <>
-      <MobileView>
-        {" "}
-        Bruk en laptop eller datamaskin for å bruke denne siden
-      </MobileView>
       <Container>
         <Hamburger />
 

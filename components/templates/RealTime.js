@@ -5,7 +5,6 @@ import Education from "./realtimeComponents/Education";
 import Experience from "./realtimeComponents/Experience";
 import Other from "./realtimeComponents/Other";
 import Hamburger from "../utils/Hamburger";
-import { MobileView } from "../FrontPage";
 
 import styled from "styled-components";
 
@@ -16,9 +15,6 @@ const Container = styled.div`
   min-height: 100vh;
   @media print {
     padding-top: 0px;
-  }
-  @media (max-width: 768px) {
-    display: none;
   }
 `;
 
@@ -50,10 +46,6 @@ const ExperienceContainer = styled.div`
 function RealTime() {
   return (
     <>
-      <MobileView>
-        {" "}
-        Bruk en laptop eller datamaskin for å bruke denne siden
-      </MobileView>
       <Container>
         <Hamburger />
         <UpperContainer>

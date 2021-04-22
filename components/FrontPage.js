@@ -18,7 +18,7 @@ const Container = styled.main`
 
 export const MobileView = styled.div`
   display: none;
-  @media (max-width: 768px) {
+  @media (max-width: 468px) {
     display: flex;
     flex: 1;
     margin: 0 5px;
