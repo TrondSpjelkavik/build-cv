@@ -208,6 +208,7 @@ function Experience() {
                   display: "flex",
                   width: "100%",
                   justifyContent: "flex-end",
+                  marginTop: "10px",
                 }}
               >
                 <img src={skill.points}></img>
@@ -219,6 +220,7 @@ function Experience() {
                   display: "flex",
                   width: "100%",
                   justifyContent: "flex-end",
+                  marginBottom: "10px",
                 }}
               >
                 {skill.level}

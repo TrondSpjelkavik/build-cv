@@ -1,49 +1,15 @@
-import { useState } from "react";
-import Link from "next/link";
-import { Container } from "./Selection";
 import Hamburger from "../components/utils/Hamburger";
+import Link from "next/link";
+import { MobileView } from "./FrontPage";
 
 import styled from "styled-components";
 
-const TemplateProfessional = styled.img`
-  height: ${({ openPro }) => (openPro ? "612px" : "312px")};
-  width: ${({ openPro }) => (openPro ? "433px" : "216px")};
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  transition: 0.4s linear;
-  cursor: ${({ openPro }) => (openPro ? "default" : "pointer")};
-
-  z-index: ${({ openPro }) => (openPro ? "999" : "10")};
-`;
-
-const TemplateOriginal = styled.img`
-  height: ${({ openOrg }) => (openOrg ? "612px" : "312px")};
-  width: ${({ openOrg }) => (openOrg ? "433px" : "216px")};
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  transition: 0.4s linear;
-  cursor: ${({ openOrg }) => (openOrg ? "default" : "pointer")};
-  z-index: ${({ openOrg }) => (openOrg ? "999" : "10")};
-`;
-
-const TemplateSavvy = styled.img`
-  height: ${({ openSavvy }) => (openSavvy ? "612px" : "312px")};
-  width: ${({ openSavvy }) => (openSavvy ? "433px" : "216px")};
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  transition: 0.4s linear;
-  cursor: ${({ openSavvy }) => (openSavvy ? "default" : "pointer")};
-`;
-
-const Images = styled.div`
-  display: flex;
-  width: 800px;
-  height: 80vh;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 0 auto;
-`;
-
-const SelectionHeadline = styled.h1`
+const SelectionHeadlines = styled.div`
   text-align: center;
   padding-top: 2rem;
+  h3 {
+    padding-top: 2rem;
+  }
 `;
 
 const RightMan = styled.img`
@@ -58,218 +24,81 @@ const LeftWoman = styled.img`
   left: 0;
 `;
 
-const CloseIconOrg = styled.div`
-  display: ${({ openOrg }) => (openOrg ? "flex" : "none")};
-  padding: 5px;
-  border: 0.5px solid black;
-  background: black;
-  color: white;
-  position: absolute;
-  font-size: 12px;
-  top: 10px;
-  right: 10px;
+const TemplatesBox = styled.div`
+  max-width: 900px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  display: flex;
+  padding-top: 2rem;
+`;
+
+const TemplateImage = styled.img`
+  z-index: 0;
+  height: 350px;
+  width: 250px;
+  margin-top: 20px;
   cursor: pointer;
-`;
-const CloseIconPro = styled.div`
-  display: ${({ openPro }) => (openPro ? "flex" : "none")};
-  padding: 5px;
-  border: 0.5px solid black;
-  background: black;
-  color: white;
-  position: absolute;
-  font-size: 12px;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-`;
-
-const CloseIconSavvy = styled.div`
-  display: ${({ openSavvy }) => (openSavvy ? "flex" : "none")};
-  padding: 5px;
-  border: 0.5px solid black;
-  background: black;
-  color: white;
-  position: absolute;
-  font-size: 12px;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-`;
-
-const OriginalBox = styled.div`
-  position: relative;
-  z-index: 9999;
-  opacity: ${({ openSavvy }) => (openSavvy ? "0" : "1")};
-  display: ${({ openPro }) => (openPro ? "none" : "block")};
-`;
-
-const ProfessionalBox = styled.div`
-  position: relative;
-  z-index: 9999;
-  display: ${({ openSavvy }) => (openSavvy ? "none" : "block")};
-  opacity: ${({ openOrg }) => (openOrg ? "0" : "1")};
-`;
-
-const SavvyBox = styled.div`
-  position: relative;
-  display: ${({ openOrg }) => (openOrg ? "none" : "block")};
-  opacity: ${({ openPro }) => (openPro ? "0" : "1")};
-  z-index: 9999;
-`;
-
-const OriginalButtons = styled.div`
-  display: ${({ openOrg }) => (openOrg ? "flex" : "none")};
-  width: 100%;
-  justify-content: space-around;
-  position: absolute;
-
-  top: 50%;
-  transform: translateY(-50%);
-  button {
-    padding: 0.7rem 1rem 0.7rem 1rem;
-    background-color: darkgreen;
-    color: white;
-    border: none;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    cursor: pointer;
+  overflow: hidden;
+  &:hover {
+    transition: 0.3s ease-in;
+    transform: scale(1.04);
   }
 `;
 
-const SavvyButtons = styled.div`
-  display: ${({ openSavvy }) => (openSavvy ? "flex" : "none")};
-  width: 100%;
-  justify-content: space-around;
-  position: absolute;
-
-  top: 50%;
-  transform: translateY(-50%);
-  button {
-    padding: 0.7rem 1rem 0.7rem 1rem;
-    background-color: darkgreen;
-    color: white;
-    border: none;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    cursor: pointer;
+const Container = styled.main`
+  min-height: 100vh;
+  font-weight: 700;
+  background-image: url("./background-shape.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  @media (max-width: 768px) {
+    display: none;
   }
 `;
 
-const ProfessionalButtons = styled.div`
-  display: ${({ openPro }) => (openPro ? "flex" : "none")};
-  width: 100%;
-  justify-content: space-around;
-  position: absolute;
-
-  top: 50%;
-  transform: translateY(-50%);
-  button {
-    padding: 0.7rem 1rem 0.7rem 1rem;
-    background-color: darkgreen;
-    color: white;
-    border: none;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    cursor: pointer;
-  }
-`;
-
-function Templates() {
-  // FULL IMG
-  // height: 612px;
-  // width: 433px;
-
-  const TemplateImages = {
-    savvy: "https://www.t-dev.no/api/skill/savvy.PNG",
-    original: "https://www.t-dev.no/api/skill/org.PNG",
-    professional: "https://www.t-dev.no/api/skill/prof-img.png",
-  };
-
-  const [openPro, setOpenPro] = useState(false);
-  const [openOrg, setOpenOrg] = useState(false);
-  const [openSavvy, setOpenSavvy] = useState(false);
+function Templates({ data }) {
+  const templates = data.templates;
 
   return (
-    <Container>
-      <Hamburger />
-      <SelectionHeadline>Velg din mal</SelectionHeadline>
-      <Images>
-        <OriginalBox openPro={openPro} openSavvy={openSavvy}>
-          <TemplateOriginal
-            openOrg={openOrg}
-            onClick={() => setOpenOrg(!openOrg)}
-            src={TemplateImages.original}
-          />
-          <OriginalButtons openOrg={openOrg}>
-            <Link href="/original">
-              <button>Bruk denne</button>
-            </Link>
-          </OriginalButtons>
-          <CloseIconOrg openOrg={openOrg} onClick={() => setOpenOrg(!openOrg)}>
-            X
-          </CloseIconOrg>
-          <p
-            style={{
-              textAlign: "center",
-              paddingTop: "10px",
-              fontWeight: "700",
-            }}
-          >
-            Orginal
-          </p>
-        </OriginalBox>
-        <ProfessionalBox openSavvy={openSavvy} openOrg={openOrg}>
-          <TemplateProfessional
-            openPro={openPro}
-            onClick={() => setOpenPro(!openPro)}
-            src={TemplateImages.professional}
-          />
-          <ProfessionalButtons openPro={openPro}>
-            <Link href="/professional">
-              <button>Bruk denne</button>
-            </Link>
-          </ProfessionalButtons>
-          <CloseIconPro openPro={openPro} onClick={() => setOpenPro(!openPro)}>
-            X
-          </CloseIconPro>
-          <p
-            style={{
-              textAlign: "center",
-              paddingTop: "10px",
-              fontWeight: "700",
-            }}
-          >
-            Profesjonelt
-          </p>
-        </ProfessionalBox>
-        <SavvyBox openOrg={openOrg} openPro={openPro}>
-          <TemplateSavvy
-            openSavvy={openSavvy}
-            onClick={() => setOpenSavvy(!openSavvy)}
-            src={TemplateImages.savvy}
-          />
-          <SavvyButtons openSavvy={openSavvy}>
-            <Link href="/savvy">
-              <button>Bruk denne</button>
-            </Link>
-          </SavvyButtons>
-          <CloseIconSavvy
-            openSavvy={openSavvy}
-            onClick={() => setOpenSavvy(!openSavvy)}
-          >
-            X
-          </CloseIconSavvy>
-          <p
-            style={{
-              textAlign: "center",
-              paddingTop: "10px",
-              fontWeight: "700",
-            }}
-          >
-            Erfaren
-          </p>
-        </SavvyBox>
-      </Images>
-      <RightMan src="./right-man.svg" />
-      <LeftWoman src="./left-woman.svg" />
-    </Container>
+    <>
+      <MobileView>
+        {" "}
+        Bruk en laptop eller datamaskin for å bruke denne siden{" "}
+      </MobileView>
+      <Container>
+        <Hamburger />
+        <SelectionHeadlines>
+          <h1>Lag din CV</h1>
+          <h3>Velg din favorittmal og begynn å bygge din CV</h3>
+        </SelectionHeadlines>
+        <div style={{ margin: "0 40px" }}>
+          <TemplatesBox>
+            {templates.map((items, index) => (
+              <div key={index} style={{ zIndex: "999", position: "relative" }}>
+                <Link href={items.path}>
+                  <TemplateImage
+                    alt={items.name}
+                    title={items.name}
+                    src={items.url}
+                  ></TemplateImage>
+                </Link>
+                <div
+                  style={{
+                    textAlign: "center",
+                    paddingTop: "5px",
+                  }}
+                >
+                  {items.name}
+                </div>
+              </div>
+            ))}
+          </TemplatesBox>
+        </div>
+        <RightMan src="./right-man.svg" />
+        <LeftWoman src="./left-woman.svg" />
+      </Container>
+    </>
   );
 }
 

@@ -1,12 +1,12 @@
-import React, { useRef, useState } from "react";
+import { useState, useRef } from "react";
 import Meta from "../components/Layout/Meta";
-import Professional from "../components/templates/Professional";
+import RealTime from "../components/templates/RealTime";
 import ReactToPrint from "react-to-print";
 
 import { PrintPreview } from "./savvy";
 import { Information, InformationContent } from "./savvy";
 
-function professional() {
+function realtime() {
   const [open, setOpen] = useState(true);
   const linkToPrint = () => {
     return <PrintPreview>Forhåndsvisning & Skriv ut</PrintPreview>;
@@ -16,9 +16,8 @@ function professional() {
   return (
     <>
       <Meta
-        title="Professional"
-        font="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap"
-        description="Med malen profesjonelt kan du fremheve dine ferdigheter og annen nøkkelinformasjon på en enkel måte"
+        title="Sanntid"
+        description="Sanntid er en oversiktlig mal satt sammen av fire elementer"
       ></Meta>
       <InformationContent open={open}>
         Husk å krysse av bakgrunnsgrafikk
@@ -35,11 +34,11 @@ function professional() {
           content={() => componentRef.current}
         />
         <div ref={componentRef}>
-          <Professional></Professional>
+          <RealTime></RealTime>
         </div>
       </div>
     </>
   );
 }
 
-export default professional;
+export default realtime;

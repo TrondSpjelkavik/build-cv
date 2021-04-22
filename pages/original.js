@@ -1,3 +1,4 @@
+import Meta from "../components/Layout/Meta";
 import Original from "../components/templates/Original";
 import React, { useRef } from "react";
 import ReactToPrint from "react-to-print";
@@ -30,12 +31,17 @@ function original() {
   // TODO:
 
   const linkToPrint = () => {
-    return <PrintPreview>Preview & Print</PrintPreview>;
+    return <PrintPreview>Forhåndsvisning & Skriv ut</PrintPreview>;
   };
   const componentRef = useRef();
 
   return (
-    <div>
+    <>
+      <Meta
+        title="Din CV"
+        font="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap"
+        description="Malen orginal er en klassisk CV og kan brukes til det meste"
+      ></Meta>
       <ReactToPrint
         trigger={linkToPrint}
         content={() => componentRef.current}
@@ -43,7 +49,7 @@ function original() {
       <div ref={componentRef}>
         <Original></Original>
       </div>
-    </div>
+    </>
   );
 }
 

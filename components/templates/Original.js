@@ -7,6 +7,7 @@ import Education from "./originalComponents/Education";
 import Courses from "./originalComponents/Courses";
 import Other from "./originalComponents/Other";
 import Hamburger from "../utils/Hamburger";
+import { MobileView } from "../FrontPage";
 
 import styled from "styled-components";
 
@@ -49,6 +50,9 @@ const Container = styled.div`
   max-width: 700px;
   min-height: 100vh;
   position: relative;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const SubSubHeadline = styled.h2`
@@ -117,6 +121,10 @@ export const InputContainer = styled.input`
 function Original() {
   return (
     <>
+      <MobileView>
+        {" "}
+        Bruk en laptop eller datamaskin for å bruke denne siden
+      </MobileView>
       <Hamburger />
       <Container>
         <Header />

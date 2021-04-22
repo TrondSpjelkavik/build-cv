@@ -8,6 +8,7 @@ import Other from "./professionalComponents/Other";
 import About from "./professionalComponents/About";
 import Experience from "./professionalComponents/Experience";
 import Language from "./professionalComponents/Language";
+import { MobileView } from "../FrontPage";
 
 import Hamburger from "../utils/Hamburger";
 
@@ -17,6 +18,9 @@ const Container = styled.main`
   min-height: 100vh;
   max-width: 800px;
   margin: 0 auto;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const ContentContainer = styled.div`
@@ -40,38 +44,35 @@ const PersonalInfo = styled.div`
   margin: 20px 20px 20px 20px;
 `;
 
-const Address = styled.div``;
-
-const RadioInput = styled.div`
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
-  font-size: 12px;
-`;
-
 function Professional() {
   return (
-    <Container>
-      <Hamburger />
+    <>
+      <MobileView>
+        {" "}
+        Bruk en laptop eller datamaskin for å bruke denne siden
+      </MobileView>
+      <Container>
+        <Hamburger />
 
-      <Header />
-      <ContentContainer>
-        <MainContainer>
-          <Summary></Summary>
-          <WorkExperience />
-          <Education />
-          <Other />
-        </MainContainer>
-        <AsideContainer>
-          <PersonalInfo>
-            <About />
-            <Experience />
+        <Header />
+        <ContentContainer>
+          <MainContainer>
+            <Summary></Summary>
+            <WorkExperience />
+            <Education />
+            <Other />
+          </MainContainer>
+          <AsideContainer>
+            <PersonalInfo>
+              <About />
+              <Experience />
 
-            <Language />
-          </PersonalInfo>
-        </AsideContainer>
-      </ContentContainer>
-    </Container>
+              <Language />
+            </PersonalInfo>
+          </AsideContainer>
+        </ContentContainer>
+      </Container>
+    </>
   );
 }
 

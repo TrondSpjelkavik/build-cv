@@ -11,13 +11,28 @@ const Container = styled.main`
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+export const MobileView = styled.div`
+  display: none;
+  @media (max-width: 768px) {
+    display: flex;
+    flex: 1;
+    margin: 0 5px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
 `;
 
 const Headline = styled.h1`
   position: absolute;
   font-family: "Open Sans", sans-serif;
   top: 20%;
-  padding-right: 100px;
+  padding-right: 140px;
   font-size: 40px;
   text-shadow: 0px 8px 1px rgba(0, 0, 0, 0.25);
 `;
@@ -33,7 +48,7 @@ const Button = styled.button`
   cursor: pointer;
   padding: 0.7rem 2rem 0.7rem 2rem;
   color: white;
-  transform: translateX(-42%) translateY(-42%);
+  transform: translateX(-58%) translateY(-42%);
   &:hover {
     background-color: darkgreen;
   }
@@ -41,14 +56,19 @@ const Button = styled.button`
 
 function FrontPage() {
   return (
-    <Container>
-      <Hamburger></Hamburger>
-      <Headline>Curricula Vitae</Headline>
-      <Link href="/templates">
-        <Button>Bygg egen CV</Button>
-      </Link>
-      <MainImage src="./frontpage.svg"></MainImage>
-    </Container>
+    <>
+      <MobileView>
+        Bruk en laptop eller datamaskin for å bruke denne siden
+      </MobileView>
+      <Container>
+        <Hamburger></Hamburger>
+        <Headline>Curricula Vitae</Headline>
+        <Link href="/templates">
+          <Button>Bygg din CV</Button>
+        </Link>
+        <MainImage src="./frontpage.svg"></MainImage>
+      </Container>
+    </>
   );
 }
 

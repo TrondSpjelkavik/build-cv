@@ -21,15 +21,15 @@ export const PrintPreview = styled.button`
   &:hover {
     background-color: darkgreen;
   }
-  @media (max-width: 645px) {
-    right: 10px;
+  @media (max-width: 768px) {
+    display: none;
   }
 `;
 
 export const Information = styled.div`
   position: fixed;
   bottom: 22px;
-  right: 210px;
+  right: 300px;
   z-index: 9;
   height: 25px;
   width: 25px;
@@ -41,6 +41,9 @@ export const Information = styled.div`
   color: white;
   font-weight: 700;
   cursor: pointer;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const InformationContent = styled.div`
@@ -60,7 +63,7 @@ function savvy() {
   const [open, setOpen] = useState(true);
 
   const linkToPrint = () => {
-    return <PrintPreview>Preview & Print</PrintPreview>;
+    return <PrintPreview>Forhåndsvisning & Skriv ut</PrintPreview>;
   };
   const componentRef = useRef();
 
@@ -69,6 +72,7 @@ function savvy() {
       <Meta
         title="Savvy"
         font="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap"
+        description="Malen erfaren er en mal med farge og bilde som kan gjøre at din CV skiller seg ut i mengden"
       ></Meta>
       <InformationContent open={open}>
         Husk å krysse av bakgrunnsgrafikk
