@@ -1,8 +1,24 @@
 import Head from "next/head";
+import { useEffect } from "react";
 
 function Meta({ font, title, description, keywords, icon, icon_apple }) {
+  useEffect(() => {
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-67ZLWLY4HV");
+  });
+
   return (
     <Head>
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-67ZLWLY4HV"
+      ></script>
+
       <meta charSet="utf-8" />
       <link rel="icon" href={icon}></link>
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
