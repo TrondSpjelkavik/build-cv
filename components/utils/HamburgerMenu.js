@@ -53,7 +53,7 @@ function HamburgerMenu({ open, setOpen }) {
       <CloseNav onClick={() => setOpen(!open)}>X</CloseNav>
       <NavList>
         <NavItems>
-          <NavImage src="./nav-image.svg"></NavImage>
+          <NavImage src="./nav-image.svg" alt="sitting woman"></NavImage>
         </NavItems>
         <Link href="/">
           <NavItems
