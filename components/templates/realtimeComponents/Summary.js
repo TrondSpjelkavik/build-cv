@@ -31,6 +31,7 @@ const SummaryBox = styled.div`
 
 const SummaryHeadline = styled.h2`
   padding-bottom: 20px;
+  width: 200px;
 `;
 
 const TextInput = styled.textarea`
@@ -48,7 +49,7 @@ const TextInput = styled.textarea`
 `;
 
 const SummaryInput = styled.p`
-  width: 350px;
+  width: 300px;
   max-width: 350px;
 `;
 

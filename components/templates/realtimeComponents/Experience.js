@@ -27,8 +27,12 @@ const WorkHistory = styled.div`
 
 const ExperienceContainer = styled.div`
   padding: 35px 0 0 50px;
+  @media (max-width: 800px) {
+    padding: 2rem;
+  }
   @media print {
     width: 400px;
+    padding: 35px 0 0 50px;
   }
 `;
 

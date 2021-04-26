@@ -28,14 +28,16 @@ const UpperContainer = styled.div`
   margin: 0 auto;
   @media (max-width: 800px) {
     flex-direction: column;
-    width: 400px;
+    width: 350px;
     height: fit-content;
     justify-content: center;
+    align-items: center;
   }
   @media print {
     flex-direction: row;
     width: 1700px;
     height: 300px;
+    align-items: stretch;
   }
 `;
 const LowerContainer = styled.div`
@@ -47,14 +49,15 @@ const LowerContainer = styled.div`
   margin: 0 auto;
   @media (max-width: 800px) {
     flex-direction: column;
-    width: 400px;
-
+    width: 350px;
+    align-items: center;
     justify-content: center;
   }
   @media print {
     flex-direction: row;
     width: 100vw;
     height: 830px;
+    align-items: stretch;
   }
 `;
 
