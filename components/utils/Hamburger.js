@@ -43,7 +43,7 @@ function Hamburger() {
   return (
     <>
       <HamburgerBox className="show" open={open} onClick={() => setOpen(!open)}>
-        <SittingImage src="./sitting.svg"></SittingImage>
+        <SittingImage src="./sitting.svg" alt="sitting human"></SittingImage>
         <HamburgerContainer>
           <HamburgerLines />
           <HamburgerLines />

@@ -75,7 +75,7 @@ function FrontPage() {
       <Link href="/templates">
         <Button>Bygg din CV</Button>
       </Link>
-      <MainImage src="./frontpage.svg"></MainImage>
+      <MainImage src="./frontpage.svg" alt="humans vector image"></MainImage>
       <Footer />
     </Container>
   );
