@@ -1,6 +1,5 @@
 import Hamburger from "../components/utils/Hamburger";
 import Link from "next/link";
-import { MobileView } from "./FrontPage";
 
 import styled from "styled-components";
 
@@ -10,18 +9,48 @@ const SelectionHeadlines = styled.div`
   h3 {
     padding-top: 2rem;
   }
+  @media (max-width: 535px) {
+    padding-top: 4rem;
+    h1 {
+      font-size: 22px;
+    }
+    h3 {
+      font-size: 16px;
+    }
+  }
 `;
 
 const RightMan = styled.img`
   position: absolute;
   bottom: 0;
   right: 0;
+  @media (max-width: 829px) {
+    position: fixed;
+    height: 300px;
+  }
+  @media (max-width: 535px) {
+    height: 200px;
+  }
+  @media (max-width: 410px) {
+    display: none;
+  }
 `;
 
 const LeftWoman = styled.img`
   position: absolute;
   bottom: 0;
   left: 0;
+  @media (max-width: 829px) {
+    position: fixed;
+    height: 300px;
+    left: 10px;
+  }
+  @media (max-width: 535px) {
+    height: 200px;
+  }
+  @media (max-width: 410px) {
+    display: none;
+  }
 `;
 
 const TemplatesBox = styled.div`
@@ -31,6 +60,9 @@ const TemplatesBox = styled.div`
   justify-content: space-between;
   display: flex;
   padding-top: 1.2rem;
+  @media (max-width: 829px) {
+    max-width: 400px;
+  }
 `;
 
 const TemplateImage = styled.img`
@@ -52,9 +84,26 @@ const Container = styled.main`
   background-image: url("./background-shape.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  @media (max-width: 768px) {
-    display: none;
+  @media (max-width: 829px) {
+    background-attachment: fixed;
   }
+`;
+
+const MobilePadding = styled.div`
+  @media (max-width: 535px) {
+    padding-top: 100px;
+  }
+`;
+
+const TemplateImageContainer = styled.div`
+
+  z-index: 999;
+  position: relative;
+  @media (max-width: 829px) {
+    margin: 0 auto;
+  }
+ 
+}}
 `;
 
 function Templates({ data }) {
@@ -62,10 +111,6 @@ function Templates({ data }) {
 
   return (
     <>
-      <MobileView>
-        {" "}
-        Bruk en laptop eller datamaskin for å bruke denne siden{" "}
-      </MobileView>
       <Container>
         <Hamburger />
         <SelectionHeadlines>
@@ -75,7 +120,7 @@ function Templates({ data }) {
         <div style={{ margin: "0 40px" }}>
           <TemplatesBox>
             {templates.map((items, index) => (
-              <div key={index} style={{ zIndex: "999", position: "relative" }}>
+              <TemplateImageContainer key={index}>
                 <Link href={items.path}>
                   <TemplateImage
                     alt={items.name}
@@ -91,13 +136,14 @@ function Templates({ data }) {
                 >
                   {items.name}
                 </div>
-              </div>
+              </TemplateImageContainer>
             ))}
           </TemplatesBox>
         </div>
         <RightMan src="./right-man.svg" />
         <LeftWoman src="./left-woman.svg" />
       </Container>
+      <MobilePadding></MobilePadding>
     </>
   );
 }

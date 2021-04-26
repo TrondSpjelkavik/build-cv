@@ -21,17 +21,34 @@ const Container = styled.main`
 
 const ContentContainer = styled.div`
   display: flex;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+  @media print {
+    flex-direction: row;
+  }
 `;
 
 const MainContainer = styled.div`
   width: 70%;
   padding: 0 20px;
+  @media (max-width: 800px) {
+    width: 100%;
+    margin: 0 auto;
+  }
 `;
 
 const AsideContainer = styled.aside`
   width: 30%;
   min-height: 90.7vh;
   background-color: #ececec;
+  @media (max-width: 800px) {
+    width: 100%;
+    margin: 0 auto;
+  }
+  @media print {
+    width: 30%;
+  }
 `;
 
 const PersonalInfo = styled.div`

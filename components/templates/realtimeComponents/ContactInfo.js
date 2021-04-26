@@ -6,10 +6,16 @@ import { FaMobileAlt } from "react-icons/fa";
 
 const ContactInfoBox = styled.div`
   width: 40vw;
-  height: 100%;
+
   display: flex;
   flex-direction: column;
   background-color: #c7c7c7;
+  @media (max-width: 800px) {
+    width: 350px;
+  }
+  @media print {
+    width: 40vw;
+  }
 `;
 
 const InfoBox = styled.div`
@@ -29,7 +35,9 @@ const IconBox = styled.div`
   align-item: center;
 `;
 
-const Headline = styled.h1``;
+const Headline = styled.h1`
+  word-break: break-word !important;
+`;
 
 const Underline = styled.div`
   height: 2px;

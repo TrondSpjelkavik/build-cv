@@ -32,6 +32,10 @@ export const ExperienceInput = styled.input`
     outline: none;
     border-bottom: 2px solid black;
   }
+  @media (max-width: 639px) {
+    width: 100px;
+    margin-left: 5px;
+  }
 `;
 
 export const YearInput = styled.input`

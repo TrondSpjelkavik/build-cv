@@ -12,6 +12,9 @@ const SummaryInput = styled.textarea`
   width: 520px;
   height: 100px;
   padding: 3px;
+  @media (max-width: 792px) {
+    width: 100%;
+  }
 `;
 
 function Summary() {

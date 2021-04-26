@@ -5,6 +5,7 @@ import styled from "styled-components";
 
 const ImageContainer = styled.div`
   margin-bottom: 10px;
+  z-index: 9999;
   @media (max-width: 645px) {
     display: flex;
     justify-content: center;

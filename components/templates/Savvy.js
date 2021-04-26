@@ -18,11 +18,11 @@ const Container = styled.main`
   width: 100%;
 
   @media (max-width: 645px) {
-    padding: 0;
+    padding-left: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: left;
   }
   @media print {
     padding-left: 100px;

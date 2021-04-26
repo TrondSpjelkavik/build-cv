@@ -1,12 +1,17 @@
 import { useState } from "react";
 
-import { ExperienceInput } from "../savvyComponents/WorkExperience";
 import { AddButton } from "../savvyComponents/Skills";
 import styled from "styled-components";
 
 const WorkExperienceContainer = styled.div`
   padding: 5px 0 5px 0;
   display: flex;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+  @media print {
+    flex-direction: row;
+  }
 `;
 const WorkYear = styled.aside`
   width: 25%;
@@ -14,12 +19,53 @@ const WorkYear = styled.aside`
   max-width: 100px;
 `;
 const WorkExperienceContent = styled.div`
-  width: 75%;
+  width: 100%;
+  @media (max-width: 800px) {
+    padding-left: 10px;
+  }
+
+  @media print {
+    width: 100%;
+    padding-left: 0px;
+  }
+`;
+
+const Foo = styled.div`
+  .company-input {
+    margin-left: 10px;
+  }
+
+  @media (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 50px;
+    .company-input {
+      margin-left: 0px;
+    }
+  }
+  @media print {
+    height: 0px;
+  }
 `;
 
 export const ContentHeadlines = styled.h3`
   padding: 10px 0;
   border-bottom: 1px solid grey;
+`;
+
+const ExperienceInput = styled.input`
+  border: none;
+  border-bottom: 1px solid black;
+  width: 150px;
+  margin-left: 0px;
+  background: transparent;
+  color: grey;
+
+  &:focus {
+    outline: none;
+    border-bottom: 2px solid black;
+  }
 `;
 
 const RemoveButton = styled.button`
@@ -31,6 +77,9 @@ const RemoveButton = styled.button`
   border: none;
   box-shadow: 1px 1px 2px grey;
   cursor: pointer;
+  @media (max-width: 800px) {
+    width: 20px;
+  }
 `;
 
 const YearInput = styled.input`
@@ -91,25 +140,26 @@ function WorkExperience() {
           <WorkYear>
             <h4 value={xp.year}>{xp.year}</h4>
           </WorkYear>
-
-          <WorkExperienceContent>
-            <h4 value={xp.position}>{xp.position}</h4>
-            <p
-              style={{ fontStyle: "italic", padding: "5px 0" }}
-              value={xp.company}
+          <div style={{ display: "flex" }}>
+            <WorkExperienceContent>
+              <h4 value={xp.position}>{xp.position}</h4>
+              <p
+                style={{ fontStyle: "italic", padding: "5px 0" }}
+                value={xp.company}
+              >
+                {xp.company}
+              </p>
+              <li value={xp.detail}>{xp.detail}</li>
+            </WorkExperienceContent>
+            <RemoveButton
+              onClick={() =>
+                setExperience(experience.filter((exp) => exp.id !== xp.id))
+              }
+              className="show"
             >
-              {xp.company}
-            </p>
-            <li value={xp.detail}>{xp.detail}</li>
-          </WorkExperienceContent>
-          <RemoveButton
-            onClick={() =>
-              setExperience(experience.filter((exp) => exp.id !== xp.id))
-            }
-            className="show"
-          >
-            X
-          </RemoveButton>
+              X
+            </RemoveButton>
+          </div>
         </WorkExperienceContainer>
       ))}
 
@@ -124,21 +174,22 @@ function WorkExperience() {
           ></YearInput>
         </WorkYear>
         <WorkExperienceContent>
-          <ExperienceInput
-            onChange={(e) => setPosition(e.target.value)}
-            placeholder="Stilling"
-            value={position}
-            type="text"
-            className="show"
-          ></ExperienceInput>
-          <ExperienceInput
-            style={{ marginLeft: "20px" }}
-            onChange={(e) => setCompany(e.target.value)}
-            placeholder="firma"
-            value={company}
-            type="text"
-            className="show"
-          ></ExperienceInput>
+          <Foo>
+            <ExperienceInput
+              onChange={(e) => setPosition(e.target.value)}
+              placeholder="Stilling"
+              value={position}
+              type="text"
+              className="show"
+            ></ExperienceInput>
+            <ExperienceInput
+              onChange={(e) => setCompany(e.target.value)}
+              placeholder="firma"
+              value={company}
+              type="text"
+              className="show company-input"
+            ></ExperienceInput>
+          </Foo>
 
           <ExperienceInput
             style={{ marginTop: "20px" }}

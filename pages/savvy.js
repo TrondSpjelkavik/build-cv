@@ -21,8 +21,8 @@ export const PrintPreview = styled.button`
   &:hover {
     background-color: darkgreen;
   }
-  @media (max-width: 768px) {
-    display: none;
+  @media (max-width: 800px) {
+    right: 20px;
   }
 `;
 
@@ -41,8 +41,8 @@ export const Information = styled.div`
   color: white;
   font-weight: 700;
   cursor: pointer;
-  @media (max-width: 768px) {
-    display: none;
+  @media (max-width: 800px) {
+    right: 260px;
   }
 `;
 

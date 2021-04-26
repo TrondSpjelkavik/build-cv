@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Footer from "./Layout/Footer";
 
 import Hamburger from "../components/utils/Hamburger";
 
@@ -11,21 +12,6 @@ const Container = styled.main`
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  @media (max-width: 768px) {
-    display: none;
-  }
-`;
-
-export const MobileView = styled.div`
-  display: none;
-  @media (max-width: 768px) {
-    display: flex;
-    flex: 1;
-    margin: 0 5px;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
 `;
 
 const Headline = styled.h1`
@@ -35,9 +21,25 @@ const Headline = styled.h1`
   padding-right: 140px;
   font-size: 40px;
   text-shadow: 0px 8px 1px rgba(0, 0, 0, 0.25);
+  @media (max-width: 656px) {
+    padding-right: 80px;
+  }
+  @media (max-width: 656px) {
+    text-align: center;
+    font-size: 30px;
+  }
+  @media (max-width: 656px) {
+    text-align: center;
+    font-size: 26px;
+    padding-right: 00px;
+  }
 `;
 
-const MainImage = styled.img``;
+const MainImage = styled.img`
+  @media (max-width: 1011px) {
+    width: 100%;
+  }
+`;
 
 const Button = styled.button`
   border: 0;
@@ -52,23 +54,30 @@ const Button = styled.button`
   &:hover {
     background-color: darkgreen;
   }
+  @media (max-width: 656px) {
+    transform: translateX(-25%);
+  }
+  @media (max-width: 656px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @media (max-width: 656px) {
+    transform: translateX(0%);
+  }
 `;
 
 function FrontPage() {
   return (
-    <>
-      <MobileView>
-        Bruk en laptop eller datamaskin for å bruke denne siden
-      </MobileView>
-      <Container>
-        <Hamburger></Hamburger>
-        <Headline>Curricula Vitae</Headline>
-        <Link href="/templates">
-          <Button>Bygg din CV</Button>
-        </Link>
-        <MainImage src="./frontpage.svg"></MainImage>
-      </Container>
-    </>
+    <Container>
+      <Hamburger></Hamburger>
+      <Headline>Curricula Vitae</Headline>
+      <Link href="/templates">
+        <Button>Bygg din CV</Button>
+      </Link>
+      <MainImage src="./frontpage.svg"></MainImage>
+      <Footer />
+    </Container>
   );
 }
 

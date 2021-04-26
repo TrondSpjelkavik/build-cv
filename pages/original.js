@@ -24,6 +24,9 @@ const PrintPreview = styled.button`
   @media (max-width: 645px) {
     right: 10px;
   }
+  @media (max-width: 800px) {
+    bottom: 40px;
+  }
 `;
 
 function original() {

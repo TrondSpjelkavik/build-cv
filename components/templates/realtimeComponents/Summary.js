@@ -7,6 +7,17 @@ const SummaryContainer = styled.div`
   display: flex;
   flex-direction: column;
   background-color: #ededed;
+  height: 300px;
+  @media (max-width: 800px) {
+    width: 350px;
+    align-items: center;
+    padding: 0 40px;
+  }
+  @media print {
+    padding: 1rem;
+    width: 60vw;
+    padding: 0;
+  }
 `;
 
 const SummaryBox = styled.div`
@@ -36,7 +47,10 @@ const TextInput = styled.textarea`
   }
 `;
 
-const SummaryInput = styled.p``;
+const SummaryInput = styled.p`
+  width: 350px;
+  max-width: 350px;
+`;
 
 function Summary() {
   const [summary, setSummary] = useState("Sammendrag");

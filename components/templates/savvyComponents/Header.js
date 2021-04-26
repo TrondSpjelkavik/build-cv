@@ -5,6 +5,7 @@ import styled from "styled-components";
 
 const Headline = styled.h1`
   font-family: "Cormorant Garamond", serif;
+
   padding: 5px 0;
   font-size: 32px;
   @media (max-width: 645px) {
@@ -17,6 +18,7 @@ const Headline = styled.h1`
 
 const HeaderContent = styled.header`
   display: flex;
+
   color: white;
   padding: 40px 0;
 `;

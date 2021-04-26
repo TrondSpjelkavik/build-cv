@@ -26,7 +26,7 @@ export const DetailsContainer = styled.table`
 export const SubContainer = styled.tr`
   align-items: center;
 
-  margin-top: 1 @media (max-width: 645px) {
+  @media (max-width: 645px) {
     margin: 0 auto;
   }
 `;
@@ -49,6 +49,9 @@ const Container = styled.div`
   max-width: 700px;
   min-height: 100vh;
   position: relative;
+  @media (max-width: 900px) {
+    padding-top: 3rem;
+  }
 `;
 
 export const SubSubHeadline = styled.h2`

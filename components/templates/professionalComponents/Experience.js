@@ -15,10 +15,6 @@ export const SkillsInput = styled.input`
     outline: none;
     border-bottom: 2px solid black;
   }
-
-  @media (max-width: 645px) {
-    width: 100px;
-  }
 `;
 
 export const AddButton = styled.button`

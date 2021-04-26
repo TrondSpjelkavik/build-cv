@@ -4,13 +4,15 @@ import { ExperienceInput } from "../savvyComponents/WorkExperience";
 import { AddButton } from "../savvyComponents/Skills";
 import styled from "styled-components";
 
-const WorkExperienceFoo = styled.div`
-  width: 75%;
-`;
-
 const EducationContainer = styled.div`
   padding: 5px 0 5px 0;
   display: flex;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+  @media print {
+    flex-direction: row;
+  }
 `;
 
 const WorkYear = styled.aside`
@@ -21,6 +23,14 @@ const WorkYear = styled.aside`
 
 const WorkExperienceContent = styled.div`
   width: 75%;
+  @media (max-width: 800px) {
+    padding-left: 5px;
+    padding-bottom: 10px;
+  }
+  @media print {
+    padding-left: 0px;
+    padding-bottom: 0px;
+  }
 `;
 
 const YearInput = styled.input`

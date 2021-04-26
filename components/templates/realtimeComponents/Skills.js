@@ -7,6 +7,9 @@ const SkillBox = styled.div`
   flex-direction: column;
   word-break: break-word;
   padding: 35px 0 35px 25px;
+  @media (max-width: 800px) {
+    margin: 5px 0;
+  }
 `;
 
 const SkillList = styled.li`

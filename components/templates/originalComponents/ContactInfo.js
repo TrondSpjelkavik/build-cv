@@ -16,6 +16,9 @@ const ContactInfoParagraph = styled.td`
   @media (max-width: 645px) {
     width: 350px;
   }
+  @media (max-width: 377px) {
+    width: 300px;
+  }
 `;
 
 const ContactInput = styled.input`
@@ -25,6 +28,9 @@ const ContactInput = styled.input`
   &:focus {
     outline: none;
     border-bottom: 2px solid black;
+  }
+  @media (max-width: 377px) {
+    width: 160px;
   }
 `;
 

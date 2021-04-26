@@ -7,6 +7,12 @@ import styled from "styled-components";
 const EducationContainer = styled.div`
   padding: 5px 0 5px 0;
   display: flex;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+  @media print {
+    flex-direction: row;
+  }
 `;
 
 const WorkYear = styled.aside`
@@ -17,6 +23,14 @@ const WorkYear = styled.aside`
 
 const WorkExperienceContent = styled.div`
   width: 75%;
+  @media (max-width: 800px) {
+    width: 200px;
+    padding-left: 5px;
+  }
+  @media print {
+    width: 75%;
+    padding-left: 0;
+  }
 `;
 
 const YearInput = styled.input`

@@ -8,10 +8,28 @@ const WorkHistory = styled.div`
   flex-direction: column;
   background-color: white;
   height: 820px;
+  @media (max-width: 800px) {
+    flex-direction: column;
+    width: 350px;
+    height: fit-content;
+    padding-bottom: 40px;
+    justify-content: center;
+    margin-bottom: 100px;
+  }
+  @media print {
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 1200px;
+    height: 830px;
+    padding-bottom: 0px;
+  }
 `;
 
 const ExperienceContainer = styled.div`
   padding: 35px 0 0 50px;
+  @media print {
+    width: 400px;
+  }
 `;
 
 const ExperienceInput = styled.input`

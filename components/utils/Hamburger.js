@@ -11,6 +11,7 @@ const HamburgerContainer = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  z-index: 9999;
 `;
 
 const HamburgerBox = styled.div`
@@ -18,6 +19,9 @@ const HamburgerBox = styled.div`
   top: 50px;
   right: 40px;
   cursor: pointer;
+  @media (max-width: 535px) {
+    right: 10px;
+  }
 `;
 
 const SittingImage = styled.img`

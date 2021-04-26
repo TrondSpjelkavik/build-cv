@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { ExperienceInput } from "../savvyComponents/WorkExperience";
 
 import styled from "styled-components";
 
@@ -14,6 +13,20 @@ const ContactInfo = styled.div`
 
 const ContactInput = styled.p`
   font-size: 14px;
+`;
+
+const ExperienceInput = styled.input`
+  border: none;
+  border-bottom: 1px solid black;
+  width: 150px;
+  margin-left: 0px;
+  background: transparent;
+  color: grey;
+
+  &:focus {
+    outline: none;
+    border-bottom: 2px solid black;
+  }
 `;
 
 function About() {

@@ -4,6 +4,7 @@ const FooterContainer = styled.footer`
   position: fixed;
   bottom: 10px;
   left: 10px;
+
   a {
     color: black;
   }
@@ -11,17 +12,19 @@ const FooterContainer = styled.footer`
 
 function Footer() {
   return (
-    <FooterContainer className="show">
-      <p>
-        Utviklet av{" "}
-        <a
-          href="https://www.trondspjelkavik.com"
-          title="Trond Fuglseth Spjelkavik"
-        >
-          Trond
-        </a>
-      </p>
-    </FooterContainer>
+    <>
+      <FooterContainer className="show">
+        <p>
+          Utviklet av{" "}
+          <a
+            href="https://www.trondspjelkavik.com"
+            title="Trond Fuglseth Spjelkavik"
+          >
+            Trond
+          </a>
+        </p>
+      </FooterContainer>
+    </>
   );
 }
 

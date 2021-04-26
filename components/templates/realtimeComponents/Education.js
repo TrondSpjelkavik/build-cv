@@ -9,6 +9,9 @@ const EducationBox = styled.div`
   flex-direction: column;
   word-break: break-word;
   padding: 5px 0 35px 25px;
+  @media print {
+    width: 60vw;
+  }
 `;
 
 const YearText = styled.li`
@@ -52,6 +55,15 @@ const RemoveButton = styled.button`
   border: none;
   box-shadow: 1px 1px 2px grey;
   cursor: pointer;
+`;
+
+const Foo = styled.div`
+  @media (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    justify-content: space-around;
+  }
 `;
 
 const SchoolHeadline = styled.h4``;
@@ -108,21 +120,22 @@ function Education() {
           </EducationInputBox>
         ))}
         <div style={{ paddingTop: "10px" }}>
-          <ExperienceInput
-            onChange={(e) => setSchool(e.target.value)}
-            placeholder="Skole"
-            value={school}
-            type="text"
-            className="show"
-          ></ExperienceInput>
-          <ExperienceInput
-            onChange={(e) => setYear(e.target.value)}
-            placeholder="År"
-            value={year}
-            type="text"
-            className="show"
-          ></ExperienceInput>
-
+          <Foo>
+            <ExperienceInput
+              onChange={(e) => setSchool(e.target.value)}
+              placeholder="Skole"
+              value={school}
+              type="text"
+              className="show"
+            ></ExperienceInput>
+            <ExperienceInput
+              onChange={(e) => setYear(e.target.value)}
+              placeholder="År"
+              value={year}
+              type="text"
+              className="show"
+            ></ExperienceInput>
+          </Foo>
           <ExperienceInput
             onChange={(e) => setDetail(e.target.value)}
             placeholder="Studie"
