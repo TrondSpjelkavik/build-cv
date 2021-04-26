@@ -82,8 +82,12 @@ const Container = styled.main`
   min-height: 100vh;
   font-weight: 700;
   background-image: url("./background-shape.svg");
-  background-repeat: repeat;
-  background-size: 100% 45%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  @media (max-width: 800px) {
+    background-repeat: repeat;
+    background-size: 100% 45%;
+  }
 `;
 
 const MobilePadding = styled.div`
