@@ -3,6 +3,12 @@ import styled from "styled-components";
 
 const SummaryBox = styled.div`
   padding-left: 20px;
+  @media (max-width: 700px) {
+    padding-top: 20px;
+  }
+  @media print {
+    padding-top: 0;
+  }
 `;
 
 const SummaryParagraph = styled.p`
@@ -17,6 +23,10 @@ const SummaryTextArea = styled.textarea`
   &:focus {
     outline: none;
     border: 2px solid green;
+  }
+
+  @media (max-width: 700px) {
+    width: 200px;
   }
 `;
 

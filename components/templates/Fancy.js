@@ -16,17 +16,35 @@ const Container = styled.div`
 const ContentContainer = styled.div`
   display: flex;
   padding: 40px 0;
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
+  @media print {
+    flex-direction: row;
+  }
 `;
 
 const LeftContainer = styled.div`
   width: 30vw;
   height: fit-content;
+  @media (max-width: 700px) {
+    width: 320px;
+  }
+  @media print {
+    width: 30vw;
+  }
 `;
 
 const RightContainer = styled.div`
   width: 70vw;
   height: fit-content;
   border-left: 3px solid #f05408;
+  @media (max-width: 700px) {
+    width: 300px;
+  }
+  @media print {
+    width: 70vw;
+  }
 `;
 
 function Fancy() {

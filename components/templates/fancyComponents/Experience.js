@@ -36,6 +36,18 @@ const PositionInfo = styled.div`
       outline: none;
       border: 2px solid green;
     }
+    @media (max-width: 700px) {
+      width: 250px;
+    }
+    @media print {
+      width: fit-content;
+    }
+  }
+  @media (max-width: 700px) {
+    width: 300px;
+  }
+  @media print {
+    width: 400px;
   }
 `;
 
@@ -64,7 +76,15 @@ const ExperienceInput = styled.input`
     outline: none;
     border-bottom: 2px solid green;
   }
+  @media (max-width: 700px) {
+    width: 100px;
+  }
+  @media print {
+    width: 150px;
+  }
 `;
+
+const DetailsText = styled.textarea``;
 
 function Experience() {
   const [experience, setExperience] = useState([]);
@@ -165,13 +185,13 @@ function Experience() {
           </YearLocation>
           <PositionInfo>
             {" "}
-            <textarea
+            <DetailsText
               onChange={(e) => setInfo(e.target.value)}
               placeholder="detaljer"
               value={info}
               type="text"
               className="show"
-            ></textarea>
+            ></DetailsText>
             <AddButton
               onClick={addExperience}
               education={experience}
