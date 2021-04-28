@@ -1,5 +1,6 @@
 import Hamburger from "../components/utils/Hamburger";
 import Link from "next/link";
+import { BiImages } from "react-icons/bi";
 
 import styled from "styled-components";
 
@@ -131,11 +132,31 @@ function Templates({ data }) {
                 </Link>
                 <div
                   style={{
-                    textAlign: "center",
                     paddingTop: "5px",
                   }}
                 >
-                  {items.name}
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <p>{items.name}</p>
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        marginLeft: "20px",
+                        cursor: "pointer",
+                        fontSize: "22px",
+                      }}
+                      onClick={() => window.open(items.url)}
+                    >
+                      <BiImages></BiImages>
+                    </div>
+                  </div>
                 </div>
               </TemplateImageContainer>
             ))}

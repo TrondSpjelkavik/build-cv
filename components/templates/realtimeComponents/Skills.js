@@ -28,7 +28,7 @@ export const AddButton = styled.button`
   height: 20px;
 `;
 
-const SkillsInput = styled.input`
+export const SkillsInput = styled.input`
   border: none;
   border-bottom: 1px solid black;
   width: 150px;

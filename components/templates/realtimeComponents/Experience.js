@@ -64,7 +64,7 @@ const YearInput = styled.input`
   }
 `;
 
-const AddButton = styled.button`
+export const AddButton = styled.button`
   border: 0;
   padding: 0 2px;
   background-color: green;
@@ -74,7 +74,7 @@ const AddButton = styled.button`
   margin-left: 10px;
   cursor: pointer;
 `;
-const RemoveButton = styled.button`
+export const RemoveButton = styled.button`
   margin-left: 10px;
   display: flex;
   align-items: center;
@@ -86,6 +86,16 @@ const RemoveButton = styled.button`
   border: none;
   box-shadow: 1px 1px 2px grey;
   cursor: pointer;
+`;
+
+const ExperienceTextarea = styled.textarea`
+  width: 260px;
+  margin-top: 10px;
+  height: 70px;
+  &:focus {
+    outline: none;
+    border: 2px solid green;
+  }
 `;
 
 function Experience() {
@@ -165,18 +175,13 @@ function Experience() {
             className="show"
           ></YearInput>
           <div style={{ display: "flex", alignItems: "flex-end" }}>
-            <textarea
-              style={{
-                width: "260px",
-                marginTop: "10px",
-                height: "70px",
-              }}
+            <ExperienceTextarea
               onChange={(e) => setDetail(e.target.value)}
               placeholder="Detailjer"
               value={detail}
               type="text"
               className="show"
-            ></textarea>
+            ></ExperienceTextarea>
             <AddButton
               onClick={addExperience}
               education={experience}
