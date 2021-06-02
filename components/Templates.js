@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Hamburger from "../components/utils/Hamburger";
 import Link from "next/link";
 import { BiImages } from "react-icons/bi";
@@ -109,8 +110,54 @@ const TemplateImageContainer = styled.div`
 }}
 `;
 
-function Templates({ data }) {
-  const templates = data.templates;
+function Templates() {
+  const [templates, setTemplates] = useState([
+    {
+      name: "Orginal",
+      path: "original",
+      type: "basic",
+      url: "https://t-dev.no/api/skill/org.PNG",
+      author: "Trond Fuglseth Spjelkavik",
+      description:
+        "This template is based on the authors resume, and is a basic template that includes github and homepage",
+    },
+    {
+      name: "Erfaren",
+      path: "savvy",
+      type: "colorful",
+      url: "https://t-dev.no/api/skill/savvy.PNG",
+      author: "Trond Fuglseth Spjelkavik",
+      description:
+        "Savvy contains colors and a playful layout. It most used for web developers or graphic designers",
+    },
+    {
+      name: "Profesjonelt",
+      path: "professional",
+      type: "professional",
+      url: "https://t-dev.no/api/skill/prof.PNG",
+      author: "Trond Fuglseth Spjelkavik",
+      description:
+        "Professional is a template that includes skills and languages with the choices of ranking the skills or languages ",
+    },
+    {
+      name: "Sanntid",
+      path: "real-time",
+      type: "semi colorful",
+      url: "https://t-dev.no/api/skill/sanntid-image.PNG",
+      author: "Trond Fuglseth Spjelkavik",
+      description:
+        "Sanntid is a resume with 4 blocks. Contains a summary, skills, contact info and skills",
+    },
+    {
+      name: "Extravagant",
+      path: "fancy",
+      type: "semi colorful",
+      url: "https://t-dev.no/api/skill/fancy.png",
+      author: "Trond Fuglseth Spjelkavik",
+      description:
+        "Fancy is a template that uses orange to dived the content, and title is designed to stand out ",
+    },
+  ]);
 
   return (
     <>

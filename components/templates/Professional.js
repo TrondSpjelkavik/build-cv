@@ -62,11 +62,10 @@ function Professional() {
     <>
       <Container>
         <Hamburger />
-
         <Header />
         <ContentContainer>
           <MainContainer>
-            <Summary></Summary>
+            <Summary />
             <WorkExperience />
             <Education />
             <Other />
@@ -75,7 +74,6 @@ function Professional() {
             <PersonalInfo>
               <About />
               <Experience />
-
               <Language />
             </PersonalInfo>
           </AsideContainer>
